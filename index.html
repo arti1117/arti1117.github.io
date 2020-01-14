@@ -16,13 +16,10 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <title>Make TARS</title>
 
     <script>
-
+        
         /*
         Browser Language Redirect script- By JavaScript Kit
         For this and over 400+ free scripts, visit http://www.javascriptkit.com
@@ -33,7 +30,7 @@
         var langcodes=new Array("en", "kr", "cn", "jp", "default")
         
         //Enter corresponding redirect URLs (last one is for default URL):
-        var langredirects=new Array("en/about.html", "kr/about.html", "cn/about.html", "jp/about.html", "index.html")
+        var langredirects=new Array("en/about.html", "kr/about.html", "cn/about.html", "jp/about.html", "en/about.html")
         
         var languageinfo=navigator.language? navigator.language : navigator.userLanguage
         var gotodefault=1
@@ -55,7 +52,7 @@
         
         if (gotodefault)
             redirectpage(langredirects[langcodes.length-1])
-         
+
     </script>
   
 </head>
