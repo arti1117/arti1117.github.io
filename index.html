@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta keywords="" content="">
     <meta description="" content="">
@@ -19,46 +20,46 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <title>Make TARS</title>
+
+    <script>
+
+        /*
+        Browser Language Redirect script- By JavaScript Kit
+        For this and over 400+ free scripts, visit http://www.javascriptkit.com
+        This notice must stay intact
+        */
+        
+        //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+        var langcodes=new Array("en", "kr", "cn", "jp", "default")
+        
+        //Enter corresponding redirect URLs (last one is for default URL):
+        var langredirects=new Array("en/about.html", "kr/about.html", "cn/about.html", "jp/about.html", "index.html")
+        
+        var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+        var gotodefault=1
+        
+        function redirectpage(dest){
+            if (window.location.replace)
+                window.location.replace(dest)
+            else
+                window.location=dest
+        }
+        
+        for (i=0;i<langcodes.length-1;i++){
+            if (languageinfo.substr(0,2)==langcodes[i]){
+                redirectpage(langredirects[i])
+                gotodefault=0
+                break
+            }
+        }
+        
+        if (gotodefault)
+            redirectpage(langredirects[langcodes.length-1])
+         
+    </script>
   
 </head>
 <body>
-
-    <h1 align="center">JAEYEONG CHOI</h1>
-
-    <p>Hello, my name is JAEYEONG CHOI</p>
-    <p>I am Web Server Developer and Deep Learning Enthusiast</p>
-    <p>Please Choose below Language, you want to read</p>
-
-    <p align="center">
-        <a href="language/korean/portfolio.html">우리말</a> | 
-        <a href="language/english/portfolio.html">ENGLISH</a> | 
-        <a href="language/chinese/portfolio.html">中文</a> | 
-        <a href="language/japanese/portfolio.html">日本語</a>
-    </p>
-    
-    <!--PORTFOLIO-->
-        TOYO SYSTEM<br>
-            -RPA
-            -HITCOSHI
-            -BANDER
-            -물류시스템 유지보수
-            -SCM 혁명
-            -표시인증 시스템
-        
-        K-MOVE
-            -영화예매 사이트
-            -가위바위보 예측 시스템
-
-    
-    <!--CONTACT-->
-        <a href="mailto:darkmoonz1004@gmail.com">E-mail</a><br>
-        <a href="https://github.com/arti1117">GitHub</a><br>
-        <a href="https://www.kaggle.com/arti1117">Kaggle</a><br>
-        <a href="https://www.youtube.com/channel/UCS58HiqN_4j1GhrEKoZnyzA/featured">YouTube</a><br>
-
-    <br><hr>
-        <p align="center"><b>I want to make the machine that can help human beings to stand on their own feet in the universe.</b></p>
-        <p align="center">Copyright ⓒ <b>JAEYEONG CHOI</b> All Rights Reserved.</p>
 
 </body>
 </html>
