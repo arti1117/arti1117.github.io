@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{HTTP:Accept-Language} (ko) [NC]
+RewriteRule .* /ko/about.html [L]
+RewriteCond %{HTTP:Accept-Language} (en) [NC]
+RewriteRule .* /en/about.html [L]
+RewriteCond %{HTTP:Accept-Language} (zh) [NC]
+RewriteRule .* /zh/about.html [L]
+RewriteCond %{HTTP:Accept-Language} (ja) [NC]
+RewriteRule .* /ja/about.html [L]

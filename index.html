@@ -7,12 +7,12 @@
     <meta description="" content="">
   
     <!--icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="/image/icon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/image/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/image/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/image/icon/favicon-16x16.png">
-    <link rel="manifest" href="/image/icon/site.webmanifest">
-    <link rel="mask-icon" href="/image/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" type="image/x-icon" href="/css/image/icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/css/image/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/css/image/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/css/image/icon/favicon-16x16.png">
+    <link rel="manifest" href="/css/image/icon/site.webmanifest">
+    <link rel="mask-icon" href="/css/image/icon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -20,7 +20,7 @@
   
 </head>
 <body>
-    <script>
+    <script type="text/javascript">
         
         /*
         Browser Language Redirect script- By JavaScript Kit
@@ -29,31 +29,35 @@
         */
         
         //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-        var langcodes=new Array("en", "kr", "cn", "jp", "default")
+        var langcodes=new Array("en", "ko", "zh", "ja", "default")
         
         //Enter corresponding redirect URLs (last one is for default URL):
-        var langredirects=new Array("en/about.html", "kr/about.html", "cn/about.html", "jp/about.html", "kr/about.html")
+        var langredirects=new Array("en/about.html", "ko/about.html", "zh/about.html", "ja/about.html", "ko/about.html")
         
-        var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+        var languageinfo=navigator.language ? navigator.language : navigator.userLanguage
+        
         var gotodefault=1
         
         function redirectpage(dest){
-            if (window.location.replace)
+            if (window.location.replace){
                 window.location.replace(dest)
-            else
+            }
+            else {
                 window.location=dest
+            }
         }
-        
+
         for (i=0;i<langcodes.length-1;i++){
-            if (languageinfo.substr(0,2)==langcodes[i]){
+            if (languageinfo.substr(0,2).toLowerCase()==langcodes[i]){
                 redirectpage(langredirects[i])
                 gotodefault=0
                 break
             }
         }
         
-        if (gotodefault)
+        if (gotodefault){
             redirectpage(langredirects[langcodes.length-1])
+        }
 
     </script>
 </body>
