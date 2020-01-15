@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://arti1117.github.io/sitemap.xml
