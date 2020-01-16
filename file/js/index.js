@@ -7,8 +7,8 @@ $(function() {
    // Mobile height fix
    $('.height-fix').each(function(){
     var h = $(this).height();
-    $(this).height(h)
-   })
+    $(this).height(h);
+   });
   }
 
   // RESIZE RESETS
@@ -27,7 +27,7 @@ $(function() {
   // NAV POSITION
   var navPos = $('nav').position().top;
   var lastPos = 0;
-  var lockTimer
+  var lockTimer;
 
   $(window).on('scroll', function () {
 
@@ -48,7 +48,7 @@ $(function() {
     // Link Highlighting
     if (pos2 > $('#home').offset().top)       { highlightLink('home'); }
     if (pos2 > $('#about').offset().top)      { highlightLink('about'); }
-    if (pos2 > $('#me').offset().top)      { highlightLink('me'); }
+    if (pos2 > $('#me').offset().top)         { highlightLink('me'); }
     if (pos2 > $('#portfolio').offset().top)  { highlightLink('portfolio'); }
     if (pos2 > $('#blog').offset().top)       { highlightLink('blog'); }
     if (pos2 > $('#contact').offset().top ||
@@ -59,11 +59,11 @@ $(function() {
     // Prevent Hover on Scroll
     clearTimeout(lockTimer);
     if(!$('body').hasClass('disable-hover')) {
-      $('body').addClass('disable-hover')
+      $('body').addClass('disable-hover');
     }
 
     lockTimer = setTimeout(function(){
-      $('body').removeClass('disable-hover')
+      $('body').removeClass('disable-hover');
     }, 500);
   });
 
@@ -118,12 +118,12 @@ $(function() {
   $('#gallery').mixItUp({ });
 
   function mixClear() {
-    setTimeout(function() { $('#gallery').removeClass('waypoint') }, 2000);
+    setTimeout(function() { $('#gallery').removeClass('waypoint'); }, 2000);
   }
 
   // SCROLL ANIMATIONS
   function onScrollInit( items, elemTrigger ) {
-    var offset = $(window).height() / 1.6
+    var offset = $(window).height() / 1.6;
     items.each( function() {
       var elem = $(this),
           animationClass = elem.attr('data-animation'),
@@ -147,25 +147,24 @@ $(function() {
     });
   }
 
-  setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
+  setTimeout(function() { onScrollInit($('.waypoint')); }, 1000);
 
-  // CONTACT FORM
-  $('#contact-form').submit(function(e) {
-    e.preventDefault();
+  // // CONTACT FORM
+  // $('#my-form').submit(function(e) {
+  //   e.preventDefault();
 
-      $.ajax({
-          url: "https://formspree.io/darkmoonz1004@gmail.com",
-          method: "POST",
-          data: { message: $('form').serialize() },
-          dataType: "json"
-      }).done(function(response) {
-          $('#success').addClass('expand');
-          $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
-      });
-  });
+  //     $.ajax({
+  //         url: "https://formspree.io/mayejkoz",
+  //         method: "POST",
+  //         data: { message: $('form').serialize() },
+  //         dataType: "json"
+  //     }).done(function(response) {
+  //         $('#success').addClass('expand');
+  //         $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
+  //     });
+  // });
 
-  $('#close').click(function() {
-    $('#success').removeClass('expand');
-  })
-
+  // $('#close').click(function() {
+  //   $('#success').removeClass('expand');
+  // });
 });

@@ -12,15 +12,18 @@
     <!--External Style-->
     <link rel="stylesheet" href="/css/style/ko_style.css">
     
-    <!--Import jQuery-->
-    <script src="/file/js/jquery-3.4.1.min.js"></script>
-
-    <!-- HOSTED -->
+    <!--HOSTED-->
     <script src="/file/js/prefixfree.js"></script>
+    <script src="/file/js/jquery_001.js"></script>
+    <script src="/file/js/jquery_002.js"></script>
+    <script src="/file/js/jquery_003.js"></script>
+
+    <!--LOCALS-->
     <script src="/file/js/index.js"></script>
-    <script src="/file/js/modal.js"></script>
+    <!-- <script src="/file/js/modal.js"></script> -->
 
     <title>최재영</title>
+
 </head>
 <body class="">    
 <div class="overflow-wrap">
@@ -98,48 +101,101 @@
   </section>
 
   <!--BLOG-->
-  <section id="blog">
-    
+  <section id="blog" style="background-color: aqua;">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </section>
 
   <!--CONTACT-->
   <section id="contact">
-    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-      <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
-    </svg>
     <div class="container flex">
-      <div class="header waypoint" data-animation="slide-in-left">E-MAIL ME</div>
-      <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s" style="animation-delay: 0.25s;"></div>
-      <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s" style="animation-delay: 0.5s;">Have a question or want to work together?</div>
-      <form class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form" style="animation-delay: 0.5s;">
-        <input placeholder="Name" type="text" name="name" required="">
-        <input placeholder="Enter email" type="email" name="email" required="">
+      <div class="header" data-animation="slide-in-left">메일 보내기</div>
+      <div class="header-bar" data-animation="slide-in-right" data-delay=".25s" style="animation-delay: 0.25s;"></div>
+      <div class="highlight" data-animation="slide-in-right" data-delay=".5s" style="animation-delay: 0.5s;">도움이 필요하시면 연락해주세요!</div>
+      <form class="" id="my-form" action="https://formspree.io/mayejkoz" method="POST">
+        <input placeholder="Your email" type="email" name="email" required="">
         <textarea placeholder="Your Message" type="text" name="message"></textarea>
-        <div id="success">
-          <div>Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span></div>
-        </div>
-        <input class="button" type="submit" id="submit" value="SUBMIT">
+        <div id="status-ok" style="display: none">성공적으로 메일이 전송되었습니다. 빠른시일내로 답변드리겠습니다. 감사합니다.</div>
+        <div id="status-fail" style="display: none">죄송합니다. 메일이 전송되지 못했습니다. <span class="highlight" style="color:#E31B6D;">darkmoonz1004@gmail.com</span>로 연락 부탁드립니다.</div>
+        <input class="button" type="submit" id="my-form-button" value="SUBMIT">
       </form>
     </div>
   </section>
 
   <!--END-->
   <footer>
-    <i class="fas fa-long-arrow-alt-up page-link" dest="home"></i>
-
-    <div align="center" style="font-size:1.5rem;">
-      <a href="https://www.youtube.com/channel/UCS58HiqN_4j1GhrEKoZnyzA/featured"><i class="fab fa-youtube"></i></a> |
-      <a href="https://github.com/arti1117"><i class="fab fa-github-alt"></i></a> |
-      <a href="https://medium.com/@arti1117"><i class="fab fa-medium"></i></a>
+    <div class="icon-wrap flex row" >
+      <a href="https://www.youtube.com/channel/UCS58HiqN_4j1GhrEKoZnyzA/featured">
+        <div class="flex icon" id="icon-2">
+          <i class="fab fa-youtube"></i>
+        </div>
+      </a>|
+      <a href="https://github.com/arti1117">
+        <div class="flex icon" id="icon-3">
+          <i class="fab fa-github-alt"></i>
+        </div>
+      </a>|
+      <a href="https://medium.com/@arti1117">
+        <div class="flex icon" id="icon-4">
+          <i class="fab fa-medium"></i>
+        </div>
+      </a>
     </div>
-
-    <!-- <div align="center" style="font-size:0.8rem;">Copyright ⓒ <b>JAEYEONG CHOI</b>  All Rights Reserved.</div> -->
-
     <div class="info-box">
       <div class="footnote">Copyright ⓒ<span class="highlight">JAEYEONG CHOI</span> All Rights Reserved.</div>
     </div>
   </footer>
+
 </div>
-    <script src="/file/js/canvas.js"></script>
+
+    <!-- <script src="/file/js/canvas.js"></script> -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("my-form");
+        var button = document.getElementById("my-form-button");
+        var status = document.getElementById("status-ok");
+        var altering = document.getElementById("status-fail");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+          form.reset();
+          status.style = "display: visible; background: #04c986; color: #157051; font-size: 10pt; font-weight: 600; padding: 5px 0; border: 1px solid #157c59;";
+        }
+
+        function error() {
+          altering.style = "display: visible; background: #04c986; color: #157051; font-size: 10pt; font-weight: 600; padding: 5px 0; border: 1px solid #157c59;";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function(ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+          setTimeout(function() {status.style="display: none;"}, 5000);
+        });
+      });
+
+        // helper function for sending an AJAX request
+
+        function ajax(method, url, data, success, error){
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+        }
+    </script>
+
 </body>
 </html> 

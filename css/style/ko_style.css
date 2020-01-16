@@ -413,25 +413,52 @@ section {
         top: 11px; }
       section:nth-of-type(1) .button:hover .mdi {
         transform: rotate(90deg); }
-  section:nth-of-type(2) .label-wrap .label {
+  section:nth-of-type(2) {
+    color: rgb(34, 27, 27);}
+    section:nth-of-type(2) .highlight {
+      font-family: 'Raleway-semibold'; }
+    section:nth-of-type(2) .text {
+      margin: 0 0 20px 0;
+      font-size: 16pt;
+      line-height: 20pt;
+      z-index: 1;
+      pointer-events: none; }
+    section:nth-of-type(2) .hexagon {
+      transition: transform .9s ease-in-out; }
+      section:nth-of-type(2) .hexagon:hover {
+        transform: rotate(540deg); }
+    section:nth-of-type(2) .button {
+      padding: 12px 40px 12px 15px;
+      position: relative;
+      margin-bottom: 53px; }
+      section:nth-of-type(2) .button .mdi {
+        transition: transform .3s;
+        position: absolute;
+        right: 15px;
+        top: 11px; }
+      section:nth-of-type(2) .button:hover .mdi {
+              transform: rotate(90deg); }
+  section:nth-of-type(3) {
+    background-color: #444;}
+  section:nth-of-type(3) .label-wrap .label {
     margin: 20px 0 10px 0; }
-  section:nth-of-type(2) .bullet-wrap {
+  section:nth-of-type(3) .bullet-wrap {
     justify-content: flex-start;
     padding: 0 7px;
     height: 200px; }
-  section:nth-of-type(2) .highlight {
+  section:nth-of-type(3) .highlight {
     color: #009ADA; }
-  section:nth-of-type(2) .up-arrow {
+  section:nth-of-type(3) .up-arrow {
     margin: 15px 0;
     height: 30px; }
-  section:nth-of-type(2) .skills-wrapper {
+  section:nth-of-type(3) .skills-wrapper {
     align-items: flex-start;
     width: 100%; }
-    section:nth-of-type(2) .skills-wrapper .me {
+    section:nth-of-type(3) .skills-wrapper .me {
       height: 200px; }
-    section:nth-of-type(2) .skills-wrapper .label {
+    section:nth-of-type(3) .skills-wrapper .label {
       margin: 20px 0 15px 0; }
-  section:nth-of-type(2) .hexagon i {
+  section:nth-of-type(3) .hexagon i {
     position: absolute;
     top: 20px;
     font-size: 34pt;
@@ -439,13 +466,13 @@ section {
     left: 0;
     right: 0;
     z-index: 1; }
-  section:nth-of-type(2) .bars-wrap {
+  section:nth-of-type(3) .bars-wrap {
     margin: 50px auto 0 auto;
     width: calc(100% - 15px);
     max-width: 90%; }
-    section:nth-of-type(2) .bars-wrap:not(.animated) .fill {
+    section:nth-of-type(3) .bars-wrap:not(.animated) .fill {
       width: 0 !important; }
-  section:nth-of-type(2) .bar {
+  section:nth-of-type(3) .bar {
     color: #666;
     height: 22px;
     position: relative;
@@ -453,36 +480,18 @@ section {
     margin: 0 0 12px 0;
     align-items: flex-end;
     font-size: 7pt; }
-    section:nth-of-type(2) .bar:nth-child(1) .fill {
+    section:nth-of-type(3) .bar:nth-child(1) .fill {
       transition: 1.1s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(2) .fill {
-      transition: 1.2s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(3) .fill {
-      transition: 1.3s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(4) .fill {
-      transition: 1.4s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(5) .fill {
-      transition: 1.5s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(6) .fill {
-      transition: 1.6s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(7) .fill {
-      transition: 1.7s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(8) .fill {
-      transition: 1.8s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(9) .fill {
-      transition: 1.9s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar:nth-child(10) .fill {
-      transition: 2s 0.2s width ease-in-out; }
-    section:nth-of-type(2) .bar span {
+    section:nth-of-type(3) .bar span {
       display: none; }
-    section:nth-of-type(2) .bar.fill {
+    section:nth-of-type(3) .bar.fill {
       top: 0;
       left: 0;
       position: absolute;
       background-color: #00A1A7;
       padding: 0;
       opacity: 1; }
-    section:nth-of-type(2) .bar .tag {
+    section:nth-of-type(3) .bar .tag {
       top: 0;
       left: 0;
       position: absolute;
@@ -491,26 +500,26 @@ section {
       height: 100%;
       width: 110px;
       width: 70px; }
-    section:nth-of-type(2) .bar.secondary {
+    section:nth-of-type(3) .bar.secondary {
       background-color: #C51675; }
-      section:nth-of-type(2) .bar.secondary .tag {
+      section:nth-of-type(3) .bar.secondary .tag {
         background-color: #E31B6D; }
-    section:nth-of-type(2) .bar span {
+    section:nth-of-type(3) .bar span {
       z-index: 1;
       padding: 0 15px 0 0; }
-  section:nth-of-type(3) {
+  section:nth-of-type(4) {
     background: #f5f5f5; }
-    section:nth-of-type(3) .container {
+    section:nth-of-type(4) .container {
       padding: 0; }
-    section:nth-of-type(3) .filter-wrap {
+    section:nth-of-type(4) .filter-wrap {
       position: relative; }
-    section:nth-of-type(3) .filter {
+    section:nth-of-type(4) .filter {
       font-size: 6pt;
       font-weight: 600;
       padding: 0 20px;
       cursor: pointer;
       transition: background-color .5s; }
-    section:nth-of-type(3) .float-bar {
+    section:nth-of-type(4) .float-bar {
       top: 0;
       bottom: 0;
       left: 30px;
@@ -522,31 +531,31 @@ section {
       border-radius: 1px;
       background: #E31B6D;
       transition: all .5s ease-in-out; }
-      section:nth-of-type(3) .float-bar .row {
+      section:nth-of-type(4) .float-bar .row {
         top: 0;
         bottom: 0;
         left: -30px;
         position: absolute;
         margin: auto 0;
         transition: left .5s ease-in-out; }
-        section:nth-of-type(3) .float-bar .row .filter {
+        section:nth-of-type(4) .float-bar .row .filter {
           color: #fff; }
-    section:nth-of-type(3) .text {
+    section:nth-of-type(4) .text {
       top: 0;
       left: 0;
       position: absolute;
       width: 100%; }
-    section:nth-of-type(3) #gallery {
+    section:nth-of-type(4) #gallery {
       margin: 20px 0; }
-      section:nth-of-type(3) #gallery .text, section:nth-of-type(3) #gallery .button {
+      section:nth-of-type(4) #gallery .text, section:nth-of-type(3) #gallery .button {
         z-index: 2;
         text-align: center;
         opacity: 0;
         transition: all 0.3s ease-in-out;
         color: #1B242F; }
-        section:nth-of-type(3) #gallery .text .bold, section:nth-of-type(3) #gallery .button .bold {
+        section:nth-of-type(4) #gallery .text .bold, section:nth-of-type(3) #gallery .button .bold {
           font-size: 16pt; }
-      section:nth-of-type(3) #gallery .button {
+      section:nth-of-type(4) #gallery .button {
         right: 0;
         bottom: 0;
         left: 0;
@@ -556,125 +565,99 @@ section {
         margin: 0 auto;
         font-size: 13pt;
         padding: 7px 0; }
-      section:nth-of-type(3) #gallery .mix {
+      section:nth-of-type(4) #gallery .mix {
         display: none;
         position: relative; }
-        section:nth-of-type(3) #gallery .mix .waypoint {
+        section:nth-of-type(4) #gallery .mix .waypoint {
           background: #fff; }
-        section:nth-of-type(3) #gallery .mix .button:hover {
+        section:nth-of-type(4) #gallery .mix .button:hover {
           background: #E31B6D;
           color: #fff; }
-        section:nth-of-type(3) #gallery .mix:nth-child(1) .card {
+        section:nth-of-type(4) #gallery .mix:nth-child(1) .card {
           background: url("http://findmatthew.com/style/../img/thumb-1.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(2) .card {
+        section:nth-of-type(4) #gallery .mix:nth-child(2) .card {
           background: url("http://findmatthew.com/style/../img/thumb-2.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(3) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-3.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(4) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-4.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(5) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-5.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(6) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-6.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(7) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-7.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(8) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-8.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(9) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-9.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(10) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-10.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(11) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-11.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix:nth-child(12) .card {
-          background: url("http://findmatthew.com/style/../img/thumb-12.jpg") center center/cover; }
-        section:nth-of-type(3) #gallery .mix .card {
+      section:nth-of-type(4) #gallery .mix .card {
           height: 240px;
           max-width: 100%;
           width: calc(50vw - 8px);
           cursor: pointer;
           transition: opacity .5s; }
-        section:nth-of-type(3) #gallery .mix:hover .card {
+        section:nth-of-type(4) #gallery .mix:hover .card {
           opacity: 0; }
-        section:nth-of-type(3) #gallery .mix:hover .text {
+        section:nth-of-type(4) #gallery .mix:hover .text {
           opacity: 1;
           top: 24%; }
-        section:nth-of-type(3) #gallery .mix:hover .button {
+        section:nth-of-type(4) #gallery .mix:hover .button {
           opacity: 1;
           bottom: 24%; }
   section .flex-50-gt-sm {
     display: block; }
-  section:nth-of-type(4) {
+  section:nth-of-type(5) {
     padding: 130px 0 100px 0;
     text-align: left; }
-    section:nth-of-type(4) .flex.row-gt-sm, section:nth-of-type(4) .flex.wrap {
+    section:nth-of-type(5) .flex.row-gt-sm, section:nth-of-type(4) .flex.wrap {
       align-items: flex-start; }
-    section:nth-of-type(4) .gradient {
+    section:nth-of-type(5) .gradient {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%; }
-    section:nth-of-type(4) .blog-wrap {
+    section:nth-of-type(5) .blog-wrap {
       margin: 0 0 50px 0;
       padding: 0 2px;
       width: 100%;
       cursor: pointer; }
-      section:nth-of-type(4) .blog-wrap #thumb-1 {
+      section:nth-of-type(5) .blog-wrap #thumb-1 {
         background: url("http://findmatthew.com/style/../img/blog-1.jpg") center center/cover; }
-      section:nth-of-type(4) .blog-wrap #thumb-2 {
-        background: url("http://findmatthew.com/style/../img/blog-2.jpg") center center/cover; }
-      section:nth-of-type(4) .blog-wrap #thumb-3 {
-        background: url("http://findmatthew.com/style/../img/blog-3.jpg") center center/cover; }
-      section:nth-of-type(4) .blog-wrap #thumb-4 {
-        background: url("http://findmatthew.com/style/../img/blog-4.jpg") center center/cover; }
-      section:nth-of-type(4) .blog-wrap .fade-wrap {
+      section:nth-of-type(5) .blog-wrap .fade-wrap {
         transition: opacity .3s; }
-      section:nth-of-type(4) .blog-wrap.fade .fade-wrap {
+      section:nth-of-type(5) .blog-wrap.fade .fade-wrap {
         opacity: 0.4; }
-      section:nth-of-type(4) .blog-wrap.hover .fade-wrap .label {
+      section:nth-of-type(5) .blog-wrap.hover .fade-wrap .label {
         color: #04C2C9; }
-    section:nth-of-type(4) .label {
+    section:nth-of-type(5) .label {
       line-height: 14pt;
       font-size: 12pt;
       transition: color .3s ease-in-out; }
-    section:nth-of-type(4) .thumb {
+    section:nth-of-type(5) .thumb {
       height: 150px;
       margin: 0 0 15px 0; }
-    section:nth-of-type(4) .date {
+    section:nth-of-type(5) .date {
       font-size: 7pt;
       font-family: 'Open sans';
       margin: 5px 0 0 0; }
-    section:nth-of-type(4) .bar {
+    section:nth-of-type(5) .bar {
       height: 3px;
       width: 25%;
       background: #04C2C9;
       margin: 10px 0px; }
-    section:nth-of-type(4) .text {
+    section:nth-of-type(5) .text {
       font-size: 9pt;
       line-height: 13pt;
       max-height: 85px; }
-  section:nth-of-type(5) {
-    background: #252934;
+  section:nth-of-type(6) {
+    background: #363630;
     color: #fff;
-    padding-top: 175px; }
-    section:nth-of-type(5) .header {
+    padding-bottom: 0.2rem;}
+    section:nth-of-type(6) .header {
       color: #fff; }
-    section:nth-of-type(5) .header-bar {
+    section:nth-of-type(6) .header-bar {
       margin: 25px 0 40px 0;
       background: #fff;
       width: 110px; }
-    section:nth-of-type(5) .highlight {
+    section:nth-of-type(6) .highlight {
       font-weight: 600;
-      color: #04C2C9; }
-    section:nth-of-type(5) svg {
+      color: rgb(27, 227, 200); }
+    section:nth-of-type(6) svg {
       position: absolute;
       top: 0;
       left: 0; }
-    section:nth-of-type(5) form {
+    section:nth-of-type(6) form {
       margin: 40px auto 0 auto;
-      min-width: 95%; }
-    section:nth-of-type(5) input[type="text"], section:nth-of-type(5) input[type="email"], section:nth-of-type(5) textarea {
+      min-width: 50%; }
+    section:nth-of-type(6) input[type="email"] {
       display: block;
       width: 100%;
       box-sizing: border-box;
@@ -685,10 +668,20 @@ section {
       font-size: 12pt;
       margin-bottom: 3px;
       color: #fff; }
-    section:nth-of-type(5) textarea {
-      min-height: 150px;
+    section:nth-of-type(6) textarea {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+      border: 0;
+      padding: 10px 15px;
+      background: #1E242C;
+      font-size: 12pt;
+      margin-bottom: 3px;
+      color: #fff; 
+      min-height: 100px;
       margin-bottom: 5px; }
-    section:nth-of-type(5) .button {
+    section:nth-of-type(6) .button {
       float: right;
       margin: 5px 0 0 0;
       font-size: 12pt;
@@ -696,49 +689,12 @@ section {
       color: #fff;
       background: transparent;
       outline: 0; }
-      section:nth-of-type(5) .button:hover {
-        background: #04C2C9; }
-    section:nth-of-type(5) #success {
-      height: 0;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      transition: height .25s; }
-      section:nth-of-type(5) #success.expand {
-        height: 36px; }
-      section:nth-of-type(5) #success div {
-        background: #04c986;
-        color: #157051;
-        font-size: 10pt;
-        font-weight: 600;
-        padding: 5px 0;
-        border: 1px solid #157c59; }
-    section:nth-of-type(5) #close {
-      position: absolute;
-      padding: 5px 15px;
-      font-size: 12pt;
-      font-weight: 600;
-      right: 0;
-      cursor: pointer; }
+      section:nth-of-type(6) .button:hover {
+        background: rgb(27, 227, 200); }
 
 footer {
   background: #363630;
-  padding: 70px 0 50px 0;
   position: relative; }
-  footer .fa-long-arrow-alt-up {
-    position: absolute;
-    top: 0px;
-    font-size: 30pt;
-    width: 47px;
-    height: 50px;
-    line-height: 40pt;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: background .5s; }
-    footer .fa-long-arrow-alt-up:hover {
-      background: rgb(27, 227, 200); }
   footer .icon-wrap .icon {
     overflow: hidden;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
@@ -976,5 +932,3 @@ footer {
   section:nth-of-type(4) .blog-wrap {
     width: 270px;
     margin: 0 0 50px 20px; } }
-
-/*# sourceMappingURL=style.css.map */
