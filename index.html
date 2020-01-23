@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
     
-    <meta charset="UTF-8">
-    <meta keywords="" content="">
-    <meta description="" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="JAEYEONG CHOI,최재영,portfolio,DevOps,Machine Learning,Deep Learning,Artificial Intelligence,Object Detection,Full-Stack Develop">
+    <meta name="Description" content="A.I Engineer CHOI's Page">  
   
     <!--icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="/css/image/icon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/css/image/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/css/image/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/css/image/icon/favicon-16x16.png">
-    <link rel="manifest" href="/css/image/icon/site.webmanifest">
-    <link rel="mask-icon" href="/css/image/icon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="shortcut icon" type="image/x-icon" href="/css/icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/css/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/css/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/css/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/css/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/css/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/css/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/css/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/css/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/css/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/css/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/css/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/css/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/css/icon/favicon-16x16.png">
+    <link rel="manifest" href="/css/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/css/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
 
     <title>Make TARS</title>
   
@@ -29,21 +41,21 @@
         */
         
         //Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
-        var langcodes=new Array("en", "ko", "zh", "ja", "default")
+        var langcodes = new Array("en", "ko", "zh", "ja", "default")
         
         //Enter corresponding redirect URLs (last one is for default URL):
-        var langredirects=new Array("en/EngineerCHOI.html", "ko/EngineerCHOI.html", "zh/EngineerCHOI.html", "ja/EngineerCHOI.html", "ko/EngineerCHOI.html")
+        var langredirects = new Array("lang/EngineerCHOI.en.html", "lang/EngineerCHOI.ko.html", "lang/EngineerCHOI.zh.html", "lang/EngineerCHOI.ja.html", "lang/EngineerCHOI.ko.html")
         
-        var languageinfo=navigator.language ? navigator.language : navigator.userLanguage
+        var languageinfo = navigator.language ? navigator.language : navigator.userLanguage
         
-        var gotodefault=1
+        var gotodefault = 1
         
         function redirectpage(dest){
             if (window.location.replace){
                 window.location.replace(dest)
             }
             else {
-                window.location=dest
+                window.location = dest
             }
         }
 
