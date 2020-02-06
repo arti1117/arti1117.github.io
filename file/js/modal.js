@@ -1,52 +1,69 @@
 $(document).ready(function(){
 
-  // MODAL
+  // 프로젝트 모달씨
   var modalText = {
-    roambi: {
-      title: 'Roambi.com',
-      tag: 'BUSINESS ANALYTICS.',
-      detail: 'Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.',
+    rpa: {
+      title: 'RPA 업무자동화',
+      tag: '로봇 프로세스 자동화 / 업무자동화 솔루션 / SoftBank.',
+      detail: '일본 소프트뱅크의 업무자동화 소프트웨어인 「Synchroid」을 사용하여, 기존의. ㅇㅁㄹㅇㅁㅇㄴㄻㅇㄴㄻㅇㄴㄻㅇㄴㄻㅇㄴㄻㅇㄴㅁㅇㄴㄻㅇㄴㄹ ',
       link: 'http://www.roambi.com'
     },
-    walker: {
-      title: 'WalkerTracker',
-      tag: 'PERFORMANCE METRICS.',
-      detail: 'Walker Tracker offers goal management, fitness tracking, and team competitions to companies for internal use. A Ruby on Rails and Javascript companion site for the Walker Tracker App. Features visual metrics and gamified progression system.',
+    hikkoshi: {
+      title: '이사비용 결제시스템',
+      tag: '移徙(이사) / 사내직원 이사비용 결제시스템.',
+      detail: '.',
     },
-    powur: {
-      title: 'Powur.com',
-      tag: 'MULTI-LEVEL MARKETING.',
-      detail: 'Powur is a multi-level marketing platform for lead generation, recruitment, and team building. Built with Ruby on Rails and Angular-UI. Makes use of Angular-material for front-end visuals. Features complex user tree heiarchy and commission system.',
-      link: 'http://www.powur.com/with/42'
+    bander: {
+      title: '반다 로그데이터 자동관리',
+      tag: '타이어 스캔 이미지 / 로그데이터 자동관리프로그램 / Sick AG.',
+      detail: '출고하는 타이어를 스캔한 이미지와 로그데이터를 시스템에서 서버로 옮기고, 시간에 따라서 분류하고, 용량관리를 위해 오래된 것은 지우는 프로세스를 자동으로 관리하는 프로그램을 만들었습니다. 대량의 데이터를 실수로 삭제하는 잘못을 했지만, 이를 통해 방어적인 프로그래밍을 하는 계기가 되었습니다.',
+      link: 'dd'
     },
-    mystand: {
-      title: 'MyStand',
-      tag: 'CROWD-FUNDED CHARITY.',
-      detail: 'MyStand is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.',
+    bsb: {
+      title: '물류시스템 유지보수 및 운영',
+      tag: '유지보수 / 서버운영 / 물류.',
+      detail: '일본 전역의 브리지스톤 타이어의 입/출고를 관리하고, 현지에 맞는 시스템을 개발하고 낙후된 시스템을 유지보수하는 업무를 맡았습니다. 윈도우 운영체제를 기반으로하는 물류시스템 서버를 운영하며 시스템 엔지니어로서 안정적인 서비스를 지속가능할 수 있도록 노력했습니다.',
     },
-    never: {
-      title: 'NeverSurrender',
-      tag: 'ALS AWARENESS.',
-      detail: 'NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.',
+    scm: {
+      title: 'SCM 혁명',
+      tag: '공급망 관리 / Big Data / JDA / 생산 / 스마트팩토리.',
+      detail: '브리지스톤 일본의 생산공장 스마트팩토리화에 따른 데이터베이스 구축 프로젝트로서 데이터 검사 및 분류업무를 맡았습니다. 150여명 규모의 프로젝트로서 빅 데이터를 관리하며 JDA 솔루션을 바탕으로 타이어 생산공장의 스마트팩토리 시스템을 구축했습니다.',
     },
-    themall: {
-      title: 'The Mall',
-      tag: 'PEER GUIDED SHOPPING.',
-      detail: 'The Mall is a place to follow the latest fashion purchases of your friends and favorite celebrities. Built with Node.js and Handlebars. Features the ability to import thousands of top brands products into one shopping site.',
+    hyouji: {
+      title: '표시인증 I/O',
+      tag: '타이어 / 회사.',
+      detail: '타이어 정보가 있는 사이드 월의 문자열을 분석하는 업무를 맡아 타이어를 분류하고, 그 결과를 검색할 수 있는 시스템입니다. 회사 차원에서 프로젝트를 수행하며, 프로그래밍 보다는 전반적인 프로젝트 흐름과 서류업무 그리고 팀원들 간의 협력방식을 배웠습니다.',
+    },
+    bnc: {
+      title: '숫자야구 추측',
+      tag: '규칙기반머신 / 개인.',
+      detail: '플레이어의 중복되지 않는 임의의 숫자 네자리를 컴퓨터가 맞추는 게임입니다. 정해져 있는 게임 룰에 따라 결과값을 입력하면 컴퓨터는 결과값을 바탕으로 숫자를 추리하기 위해 조건들을 거쳐 결과값을 도출하게됩니다. 프로그램이 결과를 맞추면 컴퓨터의 승리이고, 무한반복을 하면 플레이어의 승리가 됩니다.',
+      link: "https://namu.wiki/w/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC"
+    },
+    kosmo31: {
+      title: '영화 티켓 예매',
+      tag: 'Spring / MVC / 웹 개발 / 팀.',
+      detail: '일본취업 자바개발자 양성과정 팀 프로젝트로서 극장 크기에 따른 인원수 조정화면을 맡아 참여했습니다. Spring Framework를 사용하여 기본적인 웹 페이지를 구현하였습니다. 이를 통해, 데이터의 생성, 수정, 삭제, 검색을 구현했고, jQuery를 통해 동적 웹 페이지를 만들어 보았습니다.',
+    },
+    rps: {
+      title: '가위 바위 보 예측!',
+      tag: '조건부확률 / 첫 프로젝트 / 개인.',
+      detail: '"가위, 바위, 보" 세가지 선택지를 입력하여, 다음 차례에는 플레이어가 어떤 것을 낼 것인지 미리 예측해서 화면에 출력해주는 프로그램입니다. 플레이어로 부터 얻은 입력값을 바탕으로 패턴을 형성하고, 패턴을 기반으로한 조건부확률을 계산하여 다음에 낼 것을 예측할 수 있다고 생각해 만들어 보았습니다.',
+      link: '/file/html/rps.html'
     }
   };
 
-  $('#gallery .button').on('click', function(){
+  $('#packs .button').on('click', function(){
     fillModal(this.id);
-    $('.modal-wrap').addClass('visible');
+    $('.modals').addClass('visible');
   });
 
   $('.close').on('click', function(){
-    $('.modal-wrap, #modal .button').removeClass('visible');
+    $('.modals, #modal .button').removeClass('visible');
   });
 
   $('.mask').on('click', function(){
-    $('.modal-wrap, #modal .button').removeClass('visible');
+    $('.modals, #modal .button').removeClass('visible');
   });
 
   var carousel = $('#carousel'),
@@ -57,8 +74,8 @@ $(document).ready(function(){
 
   setDimensions();
 
-  $('#next').click(function(){ shiftSlide(-1) })
-  $('#prev').click(function(){ shiftSlide(1) })
+  $('#next').click(function(){ shiftSlide(-1); });
+  $('#prev').click(function(){ shiftSlide(1); });
 
   carousel.on('mousedown', function(){
     if (carousel.hasClass('transition')) return;
@@ -68,8 +85,8 @@ $(document).ready(function(){
       $(this).css('transform','translateX('+ dragPos() +'px)');
     });
     $(document).on('mouseup', function(){
-      if (dragPos() > threshold) { return shiftSlide(1) }
-      if (dragPos() < -threshold) { return shiftSlide(-1) }
+      if (dragPos() > threshold) { return shiftSlide(1); }
+      if (dragPos() < -threshold) { return shiftSlide(-1); }
       shiftSlide(0);
     });
   });
@@ -78,9 +95,9 @@ $(document).ready(function(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
      slideWidth = $(window).innerWidth();
     }
-    $('.carousel-wrap, .slide').css('width', slideWidth);
+    $('.carousels, .slide').css('width', slideWidth);
     $('.modal').css('max-width', slideWidth);
-    $('#carousel').css('left', slideWidth * -1)
+    $('#carousel').css('left', slideWidth * -1);
   }
 
   function dragPos() {
@@ -90,7 +107,7 @@ $(document).ready(function(){
   function shiftSlide(direction) {
     if (carousel.hasClass('transition')) return;
     dragEnd = dragStart;
-    $(document).off('mouseup')
+    $(document).off('mouseup');
     carousel.off('mousemove')
             .addClass('transition')
             .css('transform','translateX(' + (direction * slideWidth) + 'px)'); 
@@ -100,28 +117,29 @@ $(document).ready(function(){
       } else if (direction === -1) {
         $('.slide:last').after($('.slide:first'));
       }
-      carousel.removeClass('transition')
+      carousel.removeClass('transition');
       carousel.css('transform','translateX(0px)'); 
-    },700)
+    },700);
   }
 
   function fillModal(id) {
     $('#modal .title').text(modalText[id].title);
     $('#modal .detail').text(modalText[id].detail);
     $('#modal .tag').text(modalText[id].tag);
-    if (modalText[id].link) $('#modal .button').addClass('visible')
-                                               .parent()
-                                               .attr('href', modalText[id].link)
-
+    if (modalText[id].link) {
+      $('#modal .button').addClass('visible').parent().attr('href', modalText[id].link);
+    }
     $.each($('#modal li'), function(index, value ) {
       $(this).text(modalText[id].bullets[index]);
     });
     $.each($('#modal .slide'), function(index, value) {
       $(this).css({
-        background: "url('img/slides/" + id + '-' + index + ".jpg') center center/cover",
-        backgroundSize: 'cover'
+        backgroundImage: "url('/css/slides/" + id + '-' + index + ".jpg')",
+        backgroundPosition: 'center',
+        backgroundSize: '80%',
+        backgroundRepeat: 'no-repeat'
       });
               
     });
   }
-})
+});
