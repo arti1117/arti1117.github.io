@@ -94,8 +94,8 @@ $(function() {
     var data = google.visualization.arrayToDataTable([
       ['Programming Language', 'Score per Skill Level and Experience'],
       ['Oracle DB', 8],
-      ['Visual Basic', 7],
       ['SQL Server', 6],
+      ['Visual Basic', 7],
       ['Python', 5],
       ['JAVA', 4],
       ['JS', 2.5]
