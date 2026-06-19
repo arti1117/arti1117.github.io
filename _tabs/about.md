@@ -1,0 +1,19 @@
+---
+# the default layout is 'page'
+icon: fas fa-info-circle
+order: 4
+---
+
+결제 인프라에서 분산 시스템의 신뢰성을 다뤄 왔습니다. 그 경험을 자율 시스템(로봇 fleet)의 신뢰성으로 옮기는 과정을 이 블로그에 기록합니다.
+
+여기서 다루는 것은 결과보다 **과정**입니다 — 어떤 대안을 저울질해, 무엇을 버리고, 왜 그렇게 결정했는지.
+
+## 관심 영역
+
+- 이종 시스템 간 상태 정합성, 정확 1회(exactly-once), 드리프트 수렴
+- fleet 컨트롤 플레인: 감사 로그(audit log), 결정적 재현(deterministic replay)
+- 분산 시스템의 관측성(observability)과 장애 대응
+
+## 링크
+
+- GitHub — [github.com/arti1117](https://github.com/arti1117)

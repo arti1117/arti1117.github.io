@@ -1,0 +1,18 @@
+#  The contact options shown on the sidebar.
+
+- type: github
+  icon: "fab fa-github"
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
+
+# Uncomment and complete to enable more contact options:
+#
+# - type: email
+#   icon: "fas fa-envelope"
+#   noblank: true
+#
+# - type: linkedin
+#   icon: "fab fa-linkedin"
+#   url: ""   # Fill with your LinkedIn homepage
