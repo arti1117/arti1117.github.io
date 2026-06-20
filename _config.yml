@@ -14,9 +14,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Reliability Architect for Autonomous Systems # the main title
+title: JAEYEONG # the main title
 
-tagline: 불확실하고 위험한 기술을 인간이 통제 가능한 시스템으로 전환한다 # it will display as the subtitle
+tagline: Reliability Architect for Autonomous Systems # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   분산 시스템과 자율 시스템(로봇 fleet)의 신뢰성을 설계로 푸는 과정을 기록합니다.
