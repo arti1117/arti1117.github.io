@@ -1,6 +1,8 @@
 ---
 icon: fas fa-id-card
 order: 5
+title: 이력
+permalink: /resume/
 ---
 
 이 페이지는 이 블로그의 **결과(result)** 기둥입니다 — 완료한 것을 담백하게 기록합니다. 진행 중인 작업은 [Projects](/projects/)에 따로 둡니다.

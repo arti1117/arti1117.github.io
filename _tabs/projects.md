@@ -1,6 +1,8 @@
 ---
 icon: fas fa-diagram-project
 order: 4
+title: 프로젝트
+permalink: /projects/
 ---
 
 자율 시스템의 신뢰성을 직접 만들어 보는 프로젝트들입니다. 결제 인프라에서 다루던 분산 시스템 신뢰성 — 정확 1회(exactly-once), 감사 가능성(auditability), 장애 복구 — 이 로봇 fleet 제어에서도 같은 문제라는 것을 코드로 확인하는 과정입니다.
