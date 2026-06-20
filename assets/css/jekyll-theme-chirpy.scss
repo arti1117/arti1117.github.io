@@ -29,6 +29,16 @@ html[data-mode="dark"] {
   --prompt-tip-bg: rgb(52 211 153 / 12%);
 }
 
+/* system mode (no data-mode) on a dark-preferring OS: match dark accents */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) {
+    --link-color: #7aa7ff;
+    --sidebar-active-color: #dce8ff;
+    --prompt-tip-icon-color: #34d399;
+    --prompt-tip-bg: rgb(52 211 153 / 12%);
+  }
+}
+
 a {
   transition: color 0.15s ease;
 }
