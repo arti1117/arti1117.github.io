@@ -3,16 +3,10 @@
 - type: github
   icon: "fab fa-github"
 
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/jaeyeong-choi-561058341/"
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
-
-# Uncomment and complete to enable more contact options:
-#
-# - type: email
-#   icon: "fas fa-envelope"
-#   noblank: true
-#
-# - type: linkedin
-#   icon: "fab fa-linkedin"
-#   url: ""   # Fill with your LinkedIn homepage

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Reliability Architect for Autonomous Systems">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2a37"/>
+      <stop offset="1" stop-color="#141d28"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g transform="translate(840,120)">
+    <g fill="none" stroke="#34415a" stroke-width="3" stroke-linecap="round">
+      <line x1="40" y1="40" x2="260" y2="40"/>
+      <line x1="40" y1="40" x2="40" y2="290"/>
+      <line x1="40" y1="40" x2="260" y2="290"/>
+      <line x1="260" y1="40" x2="260" y2="290"/>
+      <line x1="40" y1="290" x2="260" y2="290"/>
+      <line x1="40" y1="290" x2="150" y2="165"/>
+      <line x1="260" y1="40" x2="150" y2="165"/>
+    </g>
+    <g fill="#5b8def">
+      <circle cx="40" cy="40" r="11"/>
+      <circle cx="260" cy="40" r="11"/>
+      <circle cx="40" cy="290" r="11"/>
+      <circle cx="150" cy="165" r="9"/>
+    </g>
+    <circle cx="260" cy="290" r="14" fill="#34d399"/>
+  </g>
+
+  <text x="90" y="250" font-family="'DejaVu Sans', 'Liberation Sans', sans-serif" font-size="62" font-weight="700" fill="#f3f6fb" letter-spacing="-1">Reliability Architect</text>
+  <text x="90" y="322" font-family="'DejaVu Sans', 'Liberation Sans', sans-serif" font-size="62" font-weight="700" fill="#f3f6fb" letter-spacing="-1">for Autonomous Systems</text>
+  <rect x="92" y="360" width="64" height="5" rx="2.5" fill="#34d399"/>
+  <text x="90" y="432" font-family="'DejaVu Sans', 'Liberation Sans', sans-serif" font-size="30" font-weight="400" fill="#aebccf">Turning uncertain, high-risk technology</text>
+  <text x="90" y="474" font-family="'DejaVu Sans', 'Liberation Sans', sans-serif" font-size="30" font-weight="400" fill="#aebccf">into systems humans can control.</text>
+  <text x="90" y="560" font-family="ui-monospace, 'DejaVu Sans Mono', monospace" font-size="24" font-weight="400" fill="#6b7a8d" letter-spacing="2">Jaeyeong Choi · github.com/arti1117</text>
+</svg>
