@@ -1,0 +1,99 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ===================== Brand customization =====================
+   palette: ink navy #1f2a37 · system blue #5b8def · emerald #34d399 */
+
+html:not([data-mode]),
+html[data-mode="light"] {
+  --link-color: #1e5fd0;
+  --link-underline-color: #cdddff;
+  --heading-color: #1f2a37;
+  --sidebar-active-color: #16324f;
+  --btn-share-hover-color: #1e5fd0;
+  --prompt-tip-icon-color: #0e9f6e;
+  --prompt-tip-bg: rgb(52 211 153 / 14%);
+}
+
+html[data-mode="dark"] {
+  --link-color: #7aa7ff;
+  --sidebar-active-color: #dce8ff;
+  --prompt-tip-icon-color: #34d399;
+  --prompt-tip-bg: rgb(52 211 153 / 12%);
+}
+
+a {
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #0e9f6e;
+}
+
+html[data-mode="dark"] a:hover {
+  color: #34d399;
+}
+
+/* avatar: subtle emerald ring */
+#avatar {
+  box-shadow: 0 0 0 2px rgb(52 211 153 / 85%), 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+/* ===================== Sidebar collapse toggle (desktop) ===================== */
+#sidebar,
+#main-wrapper {
+  transition: transform 0.25s ease, margin-left 0.25s ease;
+}
+
+#sidebar-collapse-toggle {
+  position: fixed;
+  top: 0.55rem;
+  left: 0.55rem;
+  z-index: 100;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--sidebar-btn-bg);
+  color: var(--sidebar-muted-color);
+  box-shadow: 0 1px 5px rgb(0 0 0 / 18%);
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+#sidebar-collapse-toggle:hover {
+  color: #0e9f6e;
+}
+
+#sidebar-collapse-toggle i {
+  transition: transform 0.25s ease;
+}
+
+@media (min-width: 1200px) {
+  #sidebar-collapse-toggle {
+    display: inline-flex;
+  }
+}
+
+html.sidebar-collapsed #sidebar {
+  transform: translateX(-102%);
+}
+
+html.sidebar-collapsed #main-wrapper {
+  margin-left: 0 !important;
+}
+
+html.sidebar-collapsed #sidebar-collapse-toggle i {
+  transform: rotate(180deg);
+}
