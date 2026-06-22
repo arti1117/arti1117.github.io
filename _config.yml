@@ -19,7 +19,7 @@ title: JAEYEONG # the main title
 tagline: Reliability Architect for Autonomous Systems # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  분산 시스템과 자율 시스템(로봇 fleet)의 신뢰성을 설계로 푸는 과정을 기록합니다.
+  결제 인프라에서 자율 시스템(로봇 fleet)까지, 신뢰성을 설계로 푸는 과정을 기록합니다.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.

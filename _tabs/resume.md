@@ -10,13 +10,13 @@ permalink: /resume/
 ## 최재영 (Jaeyeong Choi)
 
 **Backend / Reliability Engineer** · 인공지능 로봇·자율 시스템 fleet의 신뢰성 (Control-Plane & Fleet Orchestration)
-분산 시스템 신뢰성 · 상태 정합성 · 9년차
+결제 인프라 운영 신뢰성 · 상태 정합성 · 9년차
 
 [GitHub](https://github.com/arti1117) · [LinkedIn](https://www.linkedin.com/in/jaeyeong-choi-561058341/) · Darkmoonz1004@gmail.com · 서울
 
 ## Summary
 
-연 4조원·100만+ 이용자 규모의 해외송금 인프라에서 이기종 분산 시스템의 상태 정합성과 24/7 운영 신뢰성을 6년간 담당했습니다. 대규모 트랜잭션을 멱등성·dedup으로 exactly-once 효과로 처리하며 장애 복구, 중복 실행 차단, 이종 시스템 간 상태 드리프트 정정을 다뤘습니다. 현재 이 신뢰성·정합성 경험을 로봇 fleet 오케스트레이션·컨트롤 플레인으로 확장하고 있습니다.
+연 4조원·100만+ 이용자 규모의 해외송금 인프라에서 이종 시스템 간 상태 정합성과 24/7 운영 신뢰성을 6년간 담당했습니다. 대규모 트랜잭션을 멱등성·dedup으로 exactly-once 효과로 처리하며 장애 복구, 중복 실행 차단, 이종 시스템 간 상태 드리프트 정정을 다뤘습니다. 현재 이 신뢰성·정합성 경험을 로봇 fleet 오케스트레이션·컨트롤 플레인으로 확장하고 있습니다.
 
 ## 경력
 
@@ -42,7 +42,7 @@ permalink: /resume/
 
 ## 기술 역량
 
-- **분산 신뢰성·운영** — 상태 정합성·reconciliation, 멱등성·dedup(exactly-once), 24/7 무중단 운영, 장애 대응·RCA, 관측성, 무중단 마이그레이션
+- **운영 신뢰성·정합성** — 상태 정합성·reconciliation, 멱등성·dedup(exactly-once), 24/7 무중단 운영, 장애 대응·RCA, 관측성, 무중단 마이그레이션
 - **언어·백엔드** — C# / .NET, MSSQL T-SQL, Python · FastAPI · Go(학습 중)
 - **인프라·메시징** — MQTT, RabbitMQ, Redis, Docker, CI/CD (GitLab Runner · Jenkins)
 - **언어** — 한국어(원어민) · 일본어(실무) · 영어(TOEIC 820) · 중국어(HSK 5급)
