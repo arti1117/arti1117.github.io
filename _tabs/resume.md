@@ -10,7 +10,7 @@ permalink: /resume/
 ## 최재영 (Jaeyeong Choi)
 
 **Backend / Reliability Engineer** · 인공지능 로봇·자율 시스템 fleet의 신뢰성 (Control-Plane & Fleet Orchestration)
-결제 인프라 운영 신뢰성 · 상태 정합성 · 9년차
+결제 인프라 운영 신뢰성 · 상태 정합성
 
 [GitHub](https://github.com/arti1117) · [LinkedIn](https://www.linkedin.com/in/jaeyeong-choi-561058341/) · Darkmoonz1004@gmail.com · 서울
 

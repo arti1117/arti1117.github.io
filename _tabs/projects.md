@@ -60,7 +60,7 @@ permalink: /projects/
 
 ## English summary
 
-A two-persona reliability portfolio for autonomous-fleet systems, carrying distributed-systems guarantees from payment infrastructure over to robot-fleet control.
+A two-persona reliability portfolio for autonomous-fleet systems, applying reliability principles proven in payment infrastructure to robot-fleet control, and testing the thesis in code.
 
 - **fleet-master-controller** (engineer, public, Go) — an audit-log and deterministic-replay layer for VDA5050 v2.x robot fleets. Shipped and `-race`-clean: a tamper-evident hash-chained audit ledger that doubles as the WAL, exactly-once crash recovery via deterministic replay, command-acceptance accountability (ACCEPTED/PENDING/STALLED/UNOBSERVED) — the fleet analogue of payment settlement reconciliation — and single-owner concurrency control. In progress: snapshot/compaction, load-tested allocation, dropout reassignment, and MQTT transport. Repo: github.com/arti1117/fleet-master-controller
 - **sentinel-systems** (operator, public) — the ops/observability plane of the same stack: a B2B control-and-monitoring infrastructure for high-risk autonomous tech, built around structural transparency, zero-config field operation, and a clear human control point. Currently at the market-research and system-design stage. Repo: github.com/arti1117/sentinel-systems
