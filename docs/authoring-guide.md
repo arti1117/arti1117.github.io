@@ -183,4 +183,13 @@ pin: false                         # 대표글에만 true (1개 정도)
 ## 5. 사이드바·탭 메모
 
 - Categories 탭은 5개 카테고리 노출. Tags 탭은 §2 사전 크기에 비례(글당 3~5개로 밀도 관리).
-- `_tabs/` order: Categories1·Tags2·Archives3·Projects4·Resume5·About6.
+- `_tabs/` order: Projects1·Resume2·About3·Categories4·Tags5·Archives6 (2026-07-10 재배치 — 글이 쌓이기 전엔 포트폴리오 탭이 앞).
+
+---
+
+## 6. 로컬 프리뷰 · 빌드 재현성 (2026-07-10)
+
+- **로컬 프리뷰**: 호스트에 Ruby 불필요 — `tools/preview-docker.sh` 실행 → http://localhost:4000. `_drafts/`까지 렌더링(`--drafts`), gems는 `vendor/bundle`(.gitignore)에 캐시되어 두 번째부터 빠름.
+- **Gemfile.lock은 커밋한다** — CI(`bundler-cache: true`)가 잠긴 버전으로 빌드(재현 가능한 배포). 의존성 갱신은 컨테이너에서 `bundle update` 후 lockfile 커밋.
+- **주간 링크체크**: `.github/workflows/link-check.yml` — 매주 토 06:00 KST, `_tabs`·`_posts`의 외부 링크 검사(배포 CI의 html-proofer는 `--disable-external`이라 링크 rot을 못 잡음). 실패 시 Actions 알림.
+- **테마 업그레이드 주의**: `_includes/sidebar.html`은 upstream 대비 추가 블록이 있는 오버라이드 — 버전 올릴 때 upstream 태그와 diff 후 재적용(Gemfile 주석 참조; 7.6.0 갱신 때 모드 토글이 한 번 깨진 전례 있음).
