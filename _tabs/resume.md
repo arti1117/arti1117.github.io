@@ -1,6 +1,6 @@
 ---
 icon: fas fa-id-card
-order: 5
+order: 2
 title: 이력
 permalink: /resume/
 ---

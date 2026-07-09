@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 6
+order: 3
 ---
 
 > **불확실하고 위험한 기술을, 인간이 통제 가능한 시스템으로 전환한다.**
@@ -22,6 +22,8 @@ order: 6
 ## 링크
 
 - GitHub — [github.com/arti1117](https://github.com/arti1117)
+- LinkedIn — [linkedin.com/in/jaeyeong-choi-561058341](https://www.linkedin.com/in/jaeyeong-choi-561058341/)
+- 이 블로그 안에서 — [프로젝트](/projects/) · [이력](/resume/)
 
 ## 라이선스
 

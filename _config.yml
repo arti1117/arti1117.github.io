@@ -28,14 +28,13 @@ url: "https://arti1117.github.io"
 github:
   username: arti1117 # change to your GitHub username
 
-twitter:
-  username: # change to your Twitter username
+# twitter: 키 제거 (2026-07-10) — 빈 username이 깨진 <meta name="twitter:site" content="@"> 태그를 만들던 것. 핸들 생기면 복원.
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Jaeyeong Choi
-  email: # 공개 노출 안 함 (2026-06-20 JY 결정 — LinkedIn만)
+  email: # 공개 노출 안 함 (2026-06-20 JY 결정 — LinkedIn만; 예외: 이력 페이지 본문 노출은 의도적, 2026-07-10 JY 확정)
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
