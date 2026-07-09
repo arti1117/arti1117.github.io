@@ -22,11 +22,11 @@ jobs:
           # github.com 링크 rate-limit 완화
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # --scheme http/https: 외부 링크만 (내부 상대경로 제외)
+          # --base-url: 루트 상대 링크(/projects/ 등)를 라이브 사이트 기준으로 해석·검사
           # --accept 999: LinkedIn의 봇 차단 응답 코드(오탐 방지)
           args: >-
             --no-progress
-            --scheme https --scheme http
+            --base-url 'https://arti1117.github.io'
             --accept '200..=299,999'
             --max-retries 3
             './_tabs/*.md' './_posts/*.md' 'README.md'
