@@ -11,8 +11,12 @@
 /* ===================== Brand customization =====================
    palette: ink navy #1f2a37 · system blue #5b8def · emerald #34d399 */
 
-html:not([data-mode]),
-html[data-mode="light"] {
+/* Chirpy 7.6(Bootstrap 5.3)은 모드를 <html data-bs-theme="...">로 표시한다.
+   구 data-mode 셀렉터는 7.6부터 매칭되지 않아 팔레트가 죽는다(2026-07-11 확인) —
+   테마와 같은 :root[data-bs-theme=...] 특이도로, 뒤 순서로 이긴다.
+   system 모드도 JS가 light/dark를 결정해 찍으므로 별도 media query 불필요. */
+:root[data-bs-theme="light"],
+:root:not([data-bs-theme]) {
   --link-color: #1e5fd0;
   --link-underline-color: #cdddff;
   --heading-color: #1f2a37;
@@ -22,21 +26,11 @@ html[data-mode="light"] {
   --prompt-tip-bg: rgb(52 211 153 / 14%);
 }
 
-html[data-mode="dark"] {
+:root[data-bs-theme="dark"] {
   --link-color: #7aa7ff;
   --sidebar-active-color: #dce8ff;
   --prompt-tip-icon-color: #34d399;
   --prompt-tip-bg: rgb(52 211 153 / 12%);
-}
-
-/* system mode (no data-mode) on a dark-preferring OS: match dark accents */
-@media (prefers-color-scheme: dark) {
-  html:not([data-mode]) {
-    --link-color: #7aa7ff;
-    --sidebar-active-color: #dce8ff;
-    --prompt-tip-icon-color: #34d399;
-    --prompt-tip-bg: rgb(52 211 153 / 12%);
-  }
 }
 
 a {
@@ -47,13 +41,58 @@ a:hover {
   color: #0e9f6e;
 }
 
-html[data-mode="dark"] a:hover {
+:root[data-bs-theme="dark"] a:hover {
   color: #34d399;
 }
 
 /* avatar: subtle emerald ring */
 #avatar {
   box-shadow: 0 0 0 2px rgb(52 211 153 / 85%), 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+/* ===================== 세 가지 신념 (About) =====================
+   본문 흐름 속의 조용한 목록 — 장식 없이 타이포그래피만.
+   폰트: Noto Serif KR 600 (SIL OFL 1.1), 21자 서브셋 셀프호스팅 (~6 KB) */
+
+@font-face {
+  font-family: "Noto Serif KR Beliefs";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/noto-serif-kr-beliefs-600.woff2") format("woff2");
+}
+
+.beliefs {
+  margin: 1.5rem 0 2rem;
+}
+
+.beliefs dt {
+  font-weight: 400;
+}
+
+.beliefs dd {
+  margin: 0.2rem 0 1.15rem;
+  word-break: keep-all; /* 한국어: 단어 중간 줄바꿈 방지 */
+}
+
+.beliefs dd:last-child {
+  margin-bottom: 0;
+}
+
+.belief-hanja {
+  font-family: "Noto Serif KR Beliefs", "Noto Serif KR", Batang, serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  color: var(--heading-color);
+}
+
+.belief-ref {
+  display: inline-block; /* 줄바꿈 시 독음·출전이 한 덩어리로 내려가게 */
+  margin-left: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted-color);
 }
 
 /* ===================== Sidebar collapse toggle (desktop) ===================== */

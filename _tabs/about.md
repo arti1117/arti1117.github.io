@@ -19,6 +19,28 @@ order: 3
 - fleet 컨트롤 플레인: 감사 로그(audit log), 결정적 재현(deterministic replay)
 - 시스템 관측성(observability)과 장애 대응
 
+## 세 가지 신념
+
+설계와 판단의 바탕에 두는 세 문장입니다.
+
+<dl class="beliefs">
+  <dt>
+    <span class="belief-hanja" lang="ko-Hani">一切唯心造</span>
+    <span class="belief-ref">일체유심조 · 『화엄경』</span>
+  </dt>
+  <dd>모든 것은 마음이 짓는다.</dd>
+  <dt>
+    <span class="belief-hanja" lang="ko-Hani">積善之家 必有餘慶</span>
+    <span class="belief-ref">적선지가 필유여경 · 『주역』 문언전</span>
+  </dt>
+  <dd>선을 쌓는 집에는 반드시 남는 경사가 있다.</dd>
+  <dt>
+    <span class="belief-hanja" lang="ko-Hani">澹泊明志 寧靜致遠</span>
+    <span class="belief-ref">담박명지 영정치원 · 제갈량 『계자서』</span>
+  </dt>
+  <dd>담박함이 뜻을 밝히고, 고요함이 멀리 이르게 한다.</dd>
+</dl>
+
 ## 링크
 
 - GitHub — [github.com/arti1117](https://github.com/arti1117)
