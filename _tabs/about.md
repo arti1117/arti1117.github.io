@@ -21,9 +21,9 @@ order: 3
 - fleet 컨트롤 플레인: 감사 로그(audit log), 결정적 재현(deterministic replay)
 - 시스템 관측성(observability)과 장애 대응
 
-## 세 가지 신념
+## 기둥
 
-설계와 판단의 바탕에 두는 세 문장입니다.
+살아가며 마음속에 지니고 있는 세 문장입니다.
 
 <dl class="beliefs">
   <dt>
