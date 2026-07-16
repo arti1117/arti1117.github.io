@@ -14,7 +14,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: JAEYEONG # the main title
+title: "JAEYEONG's BLOG" # the main title
 
 tagline: Reliability Architect for Autonomous Systems # it will display as the subtitle
 
