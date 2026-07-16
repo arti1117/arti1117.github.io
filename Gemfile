@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-# Pinned: _includes/sidebar.html is overridden to match 7.6.0's markup.
-# Re-sync that override before bumping this version.
+# Pinned: _includes/sidebar.html and _includes/head.html are overridden to
+# match 7.6.0's markup. Re-sync those overrides before bumping this version.
 gem "jekyll-theme-chirpy", "= 7.6.0"
 
 gem "html-proofer", "~> 5.0", group: :test

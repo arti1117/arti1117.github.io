@@ -3,6 +3,8 @@ icon: fas fa-diagram-project
 order: 1
 title: 프로젝트
 permalink: /projects/
+# meta description ≤160 chars (Bing flags longer; without this the 163-char auto-excerpt is used)
+description: 자율 시스템의 신뢰성을 직접 만들어 보는 프로젝트들 — 결제 인프라의 신뢰성 문제(상태 정합성, exactly-once, 감사 가능성, 장애 복구)가 로봇 fleet 제어에서도 같은 모양으로 나타나는 것을 코드로 확인하는 과정입니다.
 ---
 
 자율 시스템의 신뢰성을 직접 만들어 보는 프로젝트들입니다. 결제 인프라에서 다루던 신뢰성 문제 — 상태 정합성, 정확 1회(exactly-once), 감사 가능성(auditability), 장애 복구 — 가 로봇 fleet 제어에서도 같은 모양으로 나타난다는 것을 코드로 확인하는 과정입니다.

@@ -19,7 +19,8 @@ permalink: /rss.xml
       <link>{{ post.url | absolute_url }}</link>
       <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <description>{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</description>
+      {%- comment -%} Naver requires the full post body, not an excerpt {%- endcomment %}
+      <description>{{ post.content | strip_html | normalize_whitespace | xml_escape }}</description>
     </item>
     {%- endfor %}
   </channel>
