@@ -1,9 +1,8 @@
 {%- comment -%}
   Override of chirpy 7.6.0 head.html (re-sync before bumping the theme; see Gemfile).
-  Changes vs upstream, both in the <title> block:
-  1. home page title appends site.tagline (bare site.title is 8 chars — too short for SEO)
-  2. tab locale lookup falls back to page.title (custom tabs with Korean titles
-     have no locale key and rendered an empty title)
+  Change vs upstream, in the <title> block: tab locale lookup falls back to
+  page.title (custom tabs with Korean titles have no locale key and rendered
+  an empty title)
 {%- endcomment -%}
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -73,9 +72,6 @@
       {{- title | append: ' | ' -}}
     {%- endunless -%}
     {{- site.title -}}
-    {%- if page.layout == 'home' -%}
-      {{- site.tagline | prepend: ' | ' -}}
-    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}
