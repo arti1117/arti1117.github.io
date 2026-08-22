@@ -1,8 +1,8 @@
-# CLAUDE.md
+# Repository Instructions
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides repository-specific instructions for coding agents and human contributors.
 
-Jekyll/Chirpy blog → GitHub Pages. Default branch **master**. Workspace-level rules (publication boundary, single-copy rule, honesty constraints) live in `~/Documents/CLAUDE.md` and apply to everything here.
+Jekyll/Chirpy blog → GitHub Pages. Default branch **master**. Workspace-level rules (publication boundary, single-copy rule, honesty constraints) live in `../AGENTS.md` and apply to everything here.
 
 ## Build & test
 
