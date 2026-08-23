@@ -48,7 +48,7 @@
 
 **애매하면 한 줄 테스트:** "검증 가능한 *판단의 증거*인가, 또는 누군가에게 *남는 도움*인가?" + 복리 테스트 3개. yes면 IN. "기밀"·"곧 낡음"이면 OUT.
 
-사이트 정체성: title = *Reliability Architect for Autonomous Systems*, tagline = *불확실하고 위험한 기술을 인간이 통제 가능한 시스템으로 전환한다*.
+사이트 정체성: title = *JAEYEONG's BLOG*, tagline = *Backend Notes: State Mismatch · Duplicate Processing · Partial Failure*. 직함 대신 다루는 실패의 이름으로 쓴다.
 
 ---
 
@@ -83,7 +83,7 @@ Chirpy에서 `categories: [A, B]`는 **평행 2개가 아니라 "B는 A의 하�
 | --- | --- | --- |
 | `_posts/2026-06-20-blog-open.md` | `[학습기록]` | 시드/메타 글 |
 | `_drafts/2026-07-06-state-reconciliation.md` | `[분산시스템]` + `reliability` 태그 | 분산시스템 일차, 신뢰성은 태그로 횡단 |
-| `_drafts/2026-07-10-launch-fleet-kill9.md` | `[로봇]` + `exactly-once`·`deterministic-replay` 태그 | 결제→로봇 전이 서사, JY 육성 placeholder 잔여 |
+| `_drafts/2026-07-10-launch-fleet-kill9.md` (이 기기에서 미확인) | 복구 시 `[로봇]` + `deterministic-replay`; ack 대조 전에는 `exactly-once` 증거로 발행하지 않음 | kill-9 harness는 clean prefix만 검증. 다른 기기 원고 확인 + ack task 무손실·무중복 검증 필요 |
 
 ---
 
@@ -147,7 +147,7 @@ pin: false                         # 대표글에만 true (1개 정도)
 
 ### 3-2. 학습기록(go-lessons) 인용 규칙
 
-`local/writing/go-lessons/`는 **로컬**(별도 repo 아님). 학습기록 글에서는 **코드를 인라인 스니펫으로 인용**한다(외부 repo 링크 ✗ — 죽은 링크 회피). 공개 repo로 올리기로 결정하기 전까지 이 규칙 유지.
+`arti1117.github.io.private/go-lessons/`는 비공개 작업 저장소에 있다. 학습기록 글에서는 **코드를 인라인 스니펫으로 인용**한다(비공개 repo 링크 ✗ — 독자가 열 수 없는 링크 회피). 공개 repo로 올리기로 결정하기 전까지 이 규칙 유지.
 
 ### 3-3. 영문 요약 (맨 아래 고정)
 
@@ -172,7 +172,7 @@ pin: false                         # 대표글에만 true (1개 정도)
 - [ ] **경계** — 어디까지 검증됐고 어디부터 모르는지 말할 수 있는가
 - [ ] **언어** — 빌린 개념이라도 내 문제에 맞춰 다시 짰는가
 
-> 소유권의 *형태*는 글 종류마다 다르다 — **증명 글**은 구현으로, **원칙 글**은 도출 + 내 구현·현장으로 소유를 증명한다. 한 기준(특히 "구현한 것만")을 원칙 글에 들이대면 척추가 빈다.
+> 소유권의 *형태*는 글 종류마다 다르다 — **증명 글**은 구현 주체·저장소 검증·JY의 자력 재현 범위를 분리하고, **원칙 글**은 도출 + 귀속이 확인된 구현·현장 경험으로 소유를 증명한다. AI 구현 결과를 JY의 단독 구현으로 바꾸지 않으며, 한 기준(특히 "직접 구현한 것만")을 원칙 글에 들이대지도 않는다.
 > **온전함의 단위를 작게**: "신뢰성 전체"가 아니라 "이 trade-off 하나"로 좁히면, 신중함을 지키면서 같은 깊이를 빨리 내 것으로 만든다.
 
 ### 4-1. 형식·기밀 체크
@@ -180,7 +180,7 @@ pin: false                         # 대표글에만 true (1개 정도)
 - [ ] 카테고리 = §1의 5개 중 하나(첫 자리 하나)
 - [ ] 태그 = §2 사전 등재 + 3~5개 + 영어 kebab-case
 - [ ] 기밀: 내부 시스템명·고객·계약·incident ID·금액·정확 비율 제거(일반화) — gme/SECURITY.md
-- [ ] 과장 ✗: 완료한 것만 단정. 진행 중인 것은 "설계 방향"·"진행 중" 표기
+- [ ] 과장 ✗: 완료한 것만 단정. 진행 중인 것은 "설계 방향"·"진행 중" 표기. 저장소 테스트 완료와 JY의 학습·저작 완료를 분리하고 AI 구현 경계를 밝힌다
 - [ ] 외부 링크 살아 있나 (fleet-master-controller·sentinel-systems 둘 다 **PUBLIC** — 링크 OK)
 - [ ] 영문 요약 포함
 - [ ] `date`가 과거/현재 (미래면 미발행)
@@ -190,7 +190,7 @@ pin: false                         # 대표글에만 true (1개 정도)
 ## 5. 사이드바·탭 메모
 
 - Categories 탭은 5개 카테고리 노출. Tags 탭은 §2 사전 크기에 비례(글당 3~5개로 밀도 관리).
-- `_tabs/` order: Projects1·Resume2·About3·Categories4·Tags5·Archives6 (2026-07-10 재배치 — 글이 쌓이기 전엔 포트폴리오 탭이 앞).
+- `_tabs/` order: Projects1·About3·Categories4·Tags5·Archives6. Resume 탭은 2026-07-12 제거했고 공개 이력서는 GitHub 프로필의 `RESUME.md`에 둔다.
 
 ---
 

@@ -45,7 +45,7 @@ order: 3
 
 ## 링크
 
-- GitHub — [github.com/arti1117](https://github.com/arti1117) — 포트폴리오 · [이력](https://github.com/arti1117/arti1117/blob/main/RESUME.md)
+- GitHub — [github.com/arti1117](https://github.com/arti1117) — 프로필 · [이력](https://github.com/arti1117/arti1117/blob/main/RESUME.md)
 - LinkedIn — [linkedin.com/in/jaeyeong-choi-561058341](https://www.linkedin.com/in/jaeyeong-choi-561058341/)
 - 이 블로그 안에서 — [프로젝트](/projects/)
 
