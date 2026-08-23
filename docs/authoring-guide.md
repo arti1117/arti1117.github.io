@@ -77,13 +77,13 @@ Chirpy에서 `categories: [A, B]`는 **평행 2개가 아니라 "B는 A의 하�
 - 글이 여러 대분류에 걸치면(흔함) — 일차 하나만 카테고리로 고르고 **나머지는 태그**로 잇는다.
 - 특히 **신뢰성**은 거의 모든 글을 관통한다. *신뢰성 원리 자체가 주제*인 글만 `[신뢰성]`에 두고, 그 외(로봇/분산시스템 글이 신뢰성을 다룰 때)는 해당 카테고리 + `reliability` 태그.
 
-현재 레포 정합(적용 완료):
+정본·발행 경로 정합:
 
 | 파일 | categories | 비고 |
 | --- | --- | --- |
 | `_posts/2026-06-20-blog-open.md` | `[학습기록]` | 시드/메타 글 |
-| `_drafts/2026-07-06-state-reconciliation.md` | `[분산시스템]` + `reliability` 태그 | 분산시스템 일차, 신뢰성은 태그로 횡단 |
-| `_drafts/2026-07-10-launch-fleet-kill9.md` (이 기기에서 미확인) | 복구 시 `[로봇]` + `deterministic-replay`; ack 대조 전에는 `exactly-once` 증거로 발행하지 않음 | kill-9 harness는 clean prefix만 검증. 다른 기기 원고 확인 + ack task 무손실·무중복 검증 필요 |
+
+비공개 원고의 제목·목록·상태는 private `blog-content-roadmap.md`에서만 관리한다. 이 public 저장소는 승인 전 원고를 열거하지 않는다.
 
 ---
 
@@ -161,6 +161,16 @@ pin: false                         # 대표글에만 true (1개 정도)
 
 ---
 
+### 3-1. 작업 정본과 공개 스냅샷
+
+- 편집 가능한 단일 정본은 `../arti1117.github.io.private/drafts/YYYY-MM-DD-slug.md`에 Git으로 추적한다.
+- `tools/preview-docker.sh`는 그 디렉터리를 컨테이너의 `_drafts/`에 읽기 전용으로 마운트한다. public 저장소의 `_drafts/`에 사본을 만들지 않는다.
+- JY 승인 뒤 private 정본을 보존하고 공개 가능한 스냅샷만 `_posts/YYYY-MM-DD-slug.md`에 복사한다. 자동 동기화와 cross-repo `git mv`는 금지한다.
+- 승인 시 private front matter의 `draft_status`를 `reviewed`로 바꾸고, 공개 스냅샷에서는 그 내부 상태 필드를 제거한다.
+- GME 원자료는 private 블로그 저장소에도 그대로 넣지 않는다. 회사·고객·사건을 특정할 수 없도록 일반화·비식별화하고 반출 게이트를 통과한 원고만 둔다.
+
+---
+
 ## 4. 발행 게이트 (공개 전 1회 체크)
 
 ### 4-0. 온전히 내 것인가 (소유권 게이트 — 2026-06-23)
@@ -196,7 +206,7 @@ pin: false                         # 대표글에만 true (1개 정도)
 
 ## 6. 로컬 프리뷰 · 빌드 재현성 (2026-07-10)
 
-- **로컬 프리뷰**: 호스트에 Ruby 불필요 — `tools/preview-docker.sh` 실행 → http://localhost:4000. `_drafts/`까지 렌더링(`--drafts`), gems는 `vendor/bundle`(.gitignore)에 캐시되어 두 번째부터 빠름.
+- **로컬 프리뷰**: 호스트에 Ruby 불필요 — `tools/preview-docker.sh` 실행 → http://localhost:4000. 형제 private 저장소의 `drafts/`를 컨테이너 `_drafts/`에 읽기 전용 마운트해 렌더링하며, gems는 `vendor/bundle`(.gitignore)에 캐시되어 두 번째부터 빠름. 다른 clone을 쓸 때만 `BLOG_PRIVATE_DRAFTS_DIR=/absolute/path/to/drafts`로 지정한다.
 - **Gemfile.lock은 커밋한다** — CI(`bundler-cache: true`)가 잠긴 버전으로 빌드(재현 가능한 배포). 의존성 갱신은 컨테이너에서 `bundle update` 후 lockfile 커밋.
 - **주간 링크체크**: `.github/workflows/link-check.yml` — 매주 토 06:00 KST, `_tabs`·`_posts`의 외부 링크 검사(배포 CI의 html-proofer는 `--disable-external`이라 링크 rot을 못 잡음). 실패 시 Actions 알림.
 - **테마 업그레이드 주의**: `_includes/sidebar.html`은 upstream 대비 추가 블록이 있는 오버라이드 — 버전 올릴 때 upstream 태그와 diff 후 재적용(Gemfile 주석 참조; 7.6.0 갱신 때 모드 토글이 한 번 깨진 전례 있음).

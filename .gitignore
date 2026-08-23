@@ -8,7 +8,8 @@ vendor
 .jekyll-metadata
 _site
 
-# Drafts — local-only working space (editorial notes stay private; move to _posts/ to publish)
+# Defensive barrier only — canonical drafts are tracked in ../arti1117.github.io.private/drafts/
+# Never use this public-repo path as the editable source or publish it by moving files.
 _drafts/
 
 # RubyGems

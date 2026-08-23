@@ -19,4 +19,4 @@ Chirpy is a **pinned gem** (`jekyll-theme-chirpy = 7.6.0`), not a fork. `_includ
 
 ## Posts
 
-Front-matter format: README.md. Five categories: 인공지능 · 로봇 · 분산시스템 · 학습기록 · 신뢰성. Korean body + English summary. Permalink `/posts/:title/`; giscus comments + TOC on for posts, off for drafts. `_drafts/` is gitignored (machine-local); publishing = `git mv` into `_posts/YYYY-MM-DD-slug.md`. Audience: "the person stuck on this question, including past me" — write to help, not to impress.
+Front-matter format: README.md. Five categories: 인공지능 · 로봇 · 분산시스템 · 학습기록 · 신뢰성. Korean body + English summary. Permalink `/posts/:title/`; giscus comments + TOC on for posts, off for drafts. The tracked editable source lives at `../arti1117.github.io.private/drafts/YYYY-MM-DD-slug.md`; preview mounts it read-only as Jekyll `_drafts/`. Preserve the private source and copy only a JY-approved snapshot into `_posts/YYYY-MM-DD-slug.md`. This repo's ignored `_drafts/` is not a canonical writing location. Audience: "the person stuck on this question, including past me" — write to help, not to impress.
