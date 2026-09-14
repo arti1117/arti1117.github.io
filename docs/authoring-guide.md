@@ -81,9 +81,9 @@ Chirpy에서 `categories: [A, B]`는 **평행 2개가 아니라 "B는 A의 하�
 
 | 파일 | categories | 비고 |
 | --- | --- | --- |
-| `_posts/2026-06-20-blog-open.md` | `[학습기록]` | 시드/메타 글 |
+| `../_posts/2026-06-20-blog-open.md` | `[학습기록]` | 시드/메타 글 |
 
-비공개 원고의 제목·목록·상태는 private `blog-content-roadmap.md`에서만 관리한다. 이 public 저장소는 승인 전 원고를 열거하지 않는다.
+비공개 원고의 제목·목록·상태는 private `planning/blog-content-roadmap.md`에서만 관리한다. 이 public 저장소는 승인 전 원고를 열거하지 않는다.
 
 ---
 
