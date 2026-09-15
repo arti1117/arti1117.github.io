@@ -62,7 +62,7 @@ Chirpy에서 카테고리는 별도 등록 파일이 필요 없다. post front m
 | **인공지능** | AI·에이전트 쪽. 코딩 에이전트 fleet 신뢰성, 다중 에이전트 오케스트레이션, physical AI 수렴. | 코딩 에이전트 fleet 신뢰성 설계, 에이전트 어댑터, LLM 시스템 운영 |
 | **로봇** | 로봇 fleet 쪽. 컨트롤 플레인, VDA5050, AMR 관제, fleet-master-controller·sentinel-systems 설계 노트. | fleet-master-controller 설계, kill-9 데모 회고, VDA5050 어댑터, 관제 인프라 설계 |
 | **분산시스템** | 상태 정합성·정확 1회·합의·관측성·장애 대응 등 분산 신뢰성 *주제*. 결제 인프라 6년에서 길어 올린 패턴(정합성·exactly-once 효과·장애 대응) + fleet 프로젝트에서 다루는 합의·복구. *주제 카테고리이지 경력 주장이 아니다.* | `state-reconciliation` 멱등성 글, exactly-once 설계, observability 회고 |
-| **학습기록** | 새 스택을 익히는 과정 자체. Go·동시성 실험·도구(bench/pprof)·커리큘럼. | go-lessons 회고, Go race detector 실험, MQTT/조정 루프 학습 노트 |
+| **학습기록** | 새 스택을 익히며 확인한 원리·판단을 설명하는 글. Go·동시성 실험·도구(bench/pprof). | Go 학습 회고, Go race detector 실험, MQTT/조정 루프 학습 글 |
 | **신뢰성** | 신뢰성 *자체*를 주제로 다루는 글(도메인 횡단). 감사·결정적 재현·기록 무결성·exactly-once의 일반 원리. | "신뢰의 닻=기록 무결성" 같은 원리 글, 4증명 종합, 신뢰성 패턴 일반화 |
 
 ### 1-1. 카테고리는 한국어
@@ -124,7 +124,7 @@ Chirpy에서 `categories: [A, B]`는 **평행 2개가 아니라 "B는 A의 하�
 title: 글 제목 (한국어, 담백하게)
 date: 2026-06-21 09:00:00 +0900   # KST(+0900). 미래 날짜면 발행 안 됨
 categories: [로봇]                 # §1의 5개 중 하나. 하위 필요시 [로봇, 컨트롤플레인]
-tags: [control-plane, reliability] # §2 사전에서, 3~5개, 영어 kebab-case
+tags: [control-plane, reliability, fleet] # §2 사전에서, 3~5개, 영어 kebab-case
 toc: true
 pin: false                         # 대표글에만 true (1개 정도)
 # image:                           # 대표 이미지 있을 때만
@@ -145,9 +145,9 @@ pin: false                         # 대표글에만 true (1개 정도)
 
 > 다이어그램이 필요하면 front matter에 `mermaid: true`, 수식은 `math: true` (성능상 글 단위 opt-in, 기본 생략).
 
-### 3-2. 학습기록(go-lessons) 인용 규칙
+### 3-2. 코드·실험 근거 인용 규칙
 
-`arti1117.github.io.private/go-lessons/`는 비공개 작업 저장소에 있다. 학습기록 글에서는 **코드를 인라인 스니펫으로 인용**한다(비공개 repo 링크 ✗ — 독자가 열 수 없는 링크 회피). 공개 repo로 올리기로 결정하기 전까지 이 규칙 유지.
+비공개 블로그 저장소는 원고·편집 계획·원고 검토 기록만 관리한다. 독립 실행 코드와 독서 메모는 보관하지 않는다. 글에 필요한 짧은 코드는 본문 스니펫으로 설명하고, 재현 가능한 실험은 공개 승인을 받은 프로젝트의 고정 커밋·실행 조건·결과를 인용한다. 독자가 열 수 없는 비공개 링크를 공개 근거로 쓰지 않는다. 과거 기록만 남았거나 재현 근거가 부족하면 그 한계를 밝히고, 검증 완료로 표현하지 않는다.
 
 ### 3-3. 영문 요약 (맨 아래 고정)
 
@@ -161,13 +161,9 @@ pin: false                         # 대표글에만 true (1개 정도)
 
 ---
 
-### 3-1. 작업 정본과 공개 스냅샷
+### 3-4. 작업 정본과 공개 스냅샷
 
-- 편집 가능한 단일 정본은 `../arti1117.github.io.private/drafts/YYYY-MM-DD-slug.md`에 Git으로 추적한다.
-- `tools/preview-docker.sh`는 그 디렉터리를 컨테이너의 `_drafts/`에 읽기 전용으로 마운트한다. public 저장소의 `_drafts/`에 사본을 만들지 않는다.
-- JY 승인 뒤 private 정본을 보존하고 공개 가능한 스냅샷만 `_posts/YYYY-MM-DD-slug.md`에 복사한다. 자동 동기화와 cross-repo `git mv`는 금지한다.
-- 승인 시 private front matter의 `draft_status`를 `reviewed`로 바꾸고, 공개 스냅샷에서는 그 내부 상태 필드를 제거한다.
-- GME 원자료는 private 블로그 저장소에도 그대로 넣지 않는다. 회사·고객·사건을 특정할 수 없도록 일반화·비식별화하고 반출 게이트를 통과한 원고만 둔다.
+원고 보관·미리보기·JY 승인·공개 스냅샷 반영은 [저장소 작성 절차](../README.md#writing)를 따른다. 비공개 원고의 승인 상태는 각 원고의 `draft_status`, 목록·다음 편집은 private 콘텐츠 계획에서 관리한다. 아래 발행 게이트는 그 절차에서 검토할 글의 내용·귀속·형식 기준이다.
 
 ---
 
@@ -199,14 +195,11 @@ pin: false                         # 대표글에만 true (1개 정도)
 
 ## 5. 사이드바·탭 메모
 
-- Categories 탭은 5개 카테고리 노출. Tags 탭은 §2 사전 크기에 비례(글당 3~5개로 밀도 관리).
+- Categories·Tags 탭은 실제 발행 글이 사용하는 분류·태그를 표시한다. §1의 허용 카테고리 5개와 §2의 태그 사전을 등록했다고 빈 항목까지 노출되는 것은 아니다.
 - `_tabs/` order: Projects1·About3·Categories4·Tags5·Archives6. Resume 탭은 2026-07-12 제거했고 공개 이력서는 GitHub 프로필의 `RESUME.md`에 둔다.
 
 ---
 
-## 6. 로컬 프리뷰 · 빌드 재현성 (2026-07-10)
+## 6. 미리보기와 검증 안내
 
-- **로컬 프리뷰**: 호스트에 Ruby 불필요 — `tools/preview-docker.sh` 실행 → http://localhost:4000. 형제 private 저장소의 `drafts/`를 컨테이너 `_drafts/`에 읽기 전용 마운트해 렌더링하며, gems는 `vendor/bundle`(.gitignore)에 캐시되어 두 번째부터 빠름. 다른 clone을 쓸 때만 `BLOG_PRIVATE_DRAFTS_DIR=/absolute/path/to/drafts`로 지정한다.
-- **Gemfile.lock은 커밋한다** — CI(`bundler-cache: true`)가 잠긴 버전으로 빌드(재현 가능한 배포). 의존성 갱신은 컨테이너에서 `bundle update` 후 lockfile 커밋.
-- **주간 링크체크**: `.github/workflows/link-check.yml` — 매주 토 06:00 KST, `_tabs`·`_posts`의 외부 링크 검사(배포 CI의 html-proofer는 `--disable-external`이라 링크 rot을 못 잡음). 실패 시 Actions 알림.
-- **테마 업그레이드 주의**: `_includes/sidebar.html`은 upstream 대비 추가 블록이 있는 오버라이드 — 버전 올릴 때 upstream 태그와 diff 후 재적용(Gemfile 주석 참조; 7.6.0 갱신 때 모드 토글이 한 번 깨진 전례 있음).
+실행 명령과 의존성·테마 변경 시 주의점은 [미리보기·검증](../README.md#verification), 배포·외부 링크 검사 조건은 [배포·운영](../README.md#automation)을 따른다.
