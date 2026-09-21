@@ -55,7 +55,7 @@ bash tools/test.sh          # production build + 내부 링크 검사
 
 호스트 Ruby 없이 비공개 원고까지 확인하려면 Docker와 실행 중인 Docker 엔진을 준비하고 `bash tools/preview-docker.sh`를 사용한다. 기본 원고 경로를 바꿀 때는 `BLOG_PRIVATE_DRAFTS_DIR`을 지정한다. [run.sh](https://github.com/arti1117/arti1117.github.io/blob/master/tools/run.sh)는 호스트 Ruby 환경의 serve 옵션 도우미이며 `--production`·`--host`를 지원한다.
 
-`tools/test.sh`는 외부 링크를 검사하지 않는다. 외부 링크 검사는 별도 워크플로가 맡는다. `Gemfile.lock`을 보존하고, 테마 버전을 올릴 때는 `_includes/head.html`과 `_includes/sidebar.html`을 모두 해당 버전의 원본과 비교해 반영한다.
+`tools/test.sh`는 외부 링크를 검사하지 않는다. 외부 링크 검사는 별도 워크플로가 맡는다. `Gemfile.lock`은 보존한다. 테마 버전을 올릴 때는 `_includes/head.html`과 `_includes/sidebar.html`을 모두 해당 버전의 원본과 비교해 반영한다.
 
 <a id="automation"></a>
 
