@@ -10,7 +10,7 @@
 
 | 위치 | 역할 |
 |---|---|
-| [_posts/](https://github.com/arti1117/arti1117.github.io/tree/master/_posts) | 승인된 글 스냅샷. `.placeholder`는 초기 빈 폴더를 보존하던 파일 |
+| [_posts/](https://github.com/arti1117/arti1117.github.io/tree/master/_posts) | 승인된 글 스냅샷 |
 | [_tabs/](https://github.com/arti1117/arti1117.github.io/tree/master/_tabs) | [About](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/about.md) · [프로젝트 저장소 안내](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/projects.md) · 분류·태그·보관함 페이지 |
 | [_data/](https://github.com/arti1117/arti1117.github.io/tree/master/_data) | 사이드바 연락처와 글 공유 설정 |
 | [_includes/](https://github.com/arti1117/arti1117.github.io/tree/master/_includes) | `head.html`·`sidebar.html` 테마 오버라이드 |
@@ -20,7 +20,6 @@
 | [assets/img/](https://github.com/arti1117/arti1117.github.io/tree/master/assets/img) | 아바타·소셜 미리보기. [favicons/](https://github.com/arti1117/arti1117.github.io/tree/master/assets/img/favicons)는 실제 아이콘·manifest |
 | [docs/authoring-guide.md](https://github.com/arti1117/arti1117.github.io/blob/master/docs/authoring-guide.md) | 글 작성·분류·공개 검토 기준 |
 | [docs/brand/og-image.svg](https://github.com/arti1117/arti1117.github.io/blob/master/docs/brand/og-image.svg) | `assets/img/og.png`에 대응하는 편집 원본 |
-| [docs/history/](https://github.com/arti1117/arti1117.github.io/tree/master/docs/history) | 비활성 포트폴리오 실행 설정과 옛 JC 도안. 현재 실행 설정·favicon 생성 원본으로 사용하지 않음 |
 | [tools/](https://github.com/arti1117/arti1117.github.io/tree/master/tools) | 아래 미리보기·검증 스크립트 |
 | [.github/workflows/](https://github.com/arti1117/arti1117.github.io/tree/master/.github/workflows) | 빌드·배포와 주간 외부 링크 검사 |
 | [_config.yml](https://github.com/arti1117/arti1117.github.io/blob/master/_config.yml) | 사이트·테마·컬렉션·빌드 설정 |
@@ -64,4 +63,3 @@ bash tools/test.sh          # production build + 내부 링크 검사
 - [pages-deploy.yml](https://github.com/arti1117/arti1117.github.io/blob/master/.github/workflows/pages-deploy.yml): `main`·`master` push와 수동 실행. `paths-ignore`에 해당하는 변경만 있으면 자동 실행되지 않는다. 기본 브랜치는 `master`이고 Pages 소스는 GitHub Actions다.
 - [link-check.yml](https://github.com/arti1117/arti1117.github.io/blob/master/.github/workflows/link-check.yml): 발행 글·탭·루트 README의 외부 링크를 매주 토요일 06:00 KST에 검사한다. 이 목차의 파일·폴더 링크는 GitHub 주소로 연결해 사이트에 배포되지 않는 문서도 올바르게 검사한다.
 - IndexNow 키는 사이트 루트에서 제공하는 공개 소유 확인 값이다. ping 작업은 `continue-on-error`로 설정돼 있다.
-- 옛 정적 포트폴리오는 `legacy` 브랜치에 보존돼 있다. `docs/history/legacy-portfolio-launch.json`은 제거된 `/lang/JaeyeongChoi.ko.html`을 가리키는 비활성 설정이다.
