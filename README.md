@@ -11,7 +11,7 @@
 | 위치 | 역할 |
 |---|---|
 | [_posts/](https://github.com/arti1117/arti1117.github.io/tree/master/_posts) | 승인된 글 스냅샷. `.placeholder`는 초기 빈 폴더를 보존하던 파일 |
-| [_tabs/](https://github.com/arti1117/arti1117.github.io/tree/master/_tabs) | [About](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/about.md) · [포트폴리오 위치 안내](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/projects.md) · 분류·태그·보관함 페이지 |
+| [_tabs/](https://github.com/arti1117/arti1117.github.io/tree/master/_tabs) | [About](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/about.md) · [프로젝트 저장소 안내](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/projects.md) · 분류·태그·보관함 페이지 |
 | [_data/](https://github.com/arti1117/arti1117.github.io/tree/master/_data) | 사이드바 연락처와 글 공유 설정 |
 | [_includes/](https://github.com/arti1117/arti1117.github.io/tree/master/_includes) | `head.html`·`sidebar.html` 테마 오버라이드 |
 | [_plugins/](https://github.com/arti1117/arti1117.github.io/tree/master/_plugins) | 글의 Git 수정일을 읽는 빌드 훅 |
