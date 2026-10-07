@@ -1,0 +1,12 @@
+#  The contact options shown on the sidebar.
+
+- type: github
+  icon: "fab fa-github"
+
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/jaeyeong-choi-561058341/"
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true

@@ -1,0 +1,31 @@
+# Bundler cache
+.bundle
+vendor
+# Gemfile.lock은 커밋한다 (2026-07-10) — CI가 매 배포마다 의존성을 새로 풀지 않도록 (재현 가능한 빌드)
+
+# Jekyll cache
+.jekyll-cache
+.jekyll-metadata
+_site
+
+# Defensive barrier only — canonical drafts are tracked in ../arti1117.github.io.private/drafts/
+# Never use this public-repo path as the editable source or publish it by moving files.
+_drafts/
+
+# RubyGems
+*.gem
+
+# NPM dependencies
+node_modules
+package-lock.json
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Misc
+_sass/vendors
+assets/js/dist
