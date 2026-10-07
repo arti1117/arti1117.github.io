@@ -117,9 +117,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: arti1117/arti1117.github.io
-    repo_id: MDEwOlJlcG9zaXRvcnkyMzI5MzUwODg=
+    repo_id: R_kgDOU_cPKA
     category: Announcements
-    category_id: DIC_kwDODeJOsM4C_gzr
+    category_id: DIC_kwDOU_cPKM4DHQN4
     mapping: pathname
     strict: "0"
     input_position: bottom
