@@ -211,7 +211,7 @@ pin: false                         # 대표글에만 true (1개 정도)
 ## 5. 사이드바·탭 메모
 
 - Categories·Tags 탭은 실제 발행 글이 사용하는 분류·태그를 표시한다. §1의 허용 카테고리 5개와 §2의 태그 사전을 등록했다고 빈 항목까지 노출되지는 않는다.
-- `_tabs/` order: Projects1·About3·Categories4·Tags5·Archives6. 공개 이력서는 GitHub 프로필 저장소의 `RESUME.md`에 둔다.
+- `_tabs/` order: Categories1·Tags2·Archives3·About4. 공개 이력서는 GitHub 프로필 저장소의 `RESUME.md`에 둔다.
 
 ---
 
