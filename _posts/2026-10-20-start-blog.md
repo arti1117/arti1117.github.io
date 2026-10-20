@@ -1,6 +1,6 @@
 ---
 title: 블로그를 시작하며
-date: 2026-10-11 09:00:00 +0900
+date: 2026-10-20 15:00:00 +0900
 categories: [학습기록]
 tags: [meta]
 pin: false
