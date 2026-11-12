@@ -1,8 +1,9 @@
 {%- comment -%}
   Override of chirpy 7.6.0 head.html (re-sync before bumping the theme; see Gemfile).
-  Change vs upstream, in the <title> block: tab locale lookup falls back to
-  page.title (custom tabs with Korean titles have no locale key and rendered
-  an empty title)
+  Changes vs upstream:
+  - <title>: append site.tagline on home layout; fall back to page.title on custom tabs
+  - robots: emit <meta name="robots"> when page.robots is set
+  - PWA: append &register=true only when site.pwa.cache.enabled is true
 {%- endcomment -%}
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -59,8 +60,17 @@
     <meta name="fediverse:creator" content="{{ site.social.fediverse_handle }}">
   {% endif %}
 
+  {%- if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
+
   <title>
-    {%- unless page.layout == 'home' -%}
+    {%- if page.layout == 'home' -%}
+      {{- site.title -}}
+      {%- if site.tagline and site.tagline != empty -%}
+        {{- site.tagline | prepend: ' | ' -}}
+      {%- endif -%}
+    {%- else -%}
       {%- capture title -%}
         {%- if page.collection == 'tabs' -%}
           {%- assign tab_key = page.title | downcase -%}
@@ -69,9 +79,8 @@
           {{- page.title -}}
         {%- endif -%}
       {%- endcapture -%}
-      {{- title | append: ' | ' -}}
-    {%- endunless -%}
-    {{- site.title -}}
+      {{- title | append: ' | ' | append: site.title -}}
+    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}

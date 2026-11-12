@@ -14,7 +14,7 @@
 | [_tabs/](https://github.com/arti1117/arti1117.github.io/tree/master/_tabs) | [About](https://github.com/arti1117/arti1117.github.io/blob/master/_tabs/about.md) · 분류·태그·보관함 페이지 |
 | [_data/](https://github.com/arti1117/arti1117.github.io/tree/master/_data) | 사이드바 연락처와 글 공유 설정 |
 | [_includes/](https://github.com/arti1117/arti1117.github.io/tree/master/_includes) | `head.html`·`sidebar.html` 테마 오버라이드 |
-| [_plugins/](https://github.com/arti1117/arti1117.github.io/tree/master/_plugins) | 글의 Git 수정일을 읽는 빌드 훅 |
+| [_plugins/](https://github.com/arti1117/arti1117.github.io/tree/master/_plugins) | 글 수정일 기록과 분류 페이지 색인 제외 빌드 훅 |
 | [assets/css/](https://github.com/arti1117/arti1117.github.io/tree/master/assets/css) | 사이트 스타일 |
 | [assets/fonts/](https://github.com/arti1117/arti1117.github.io/tree/master/assets/fonts) | 자체 호스팅 폰트 |
 | [assets/img/](https://github.com/arti1117/arti1117.github.io/tree/master/assets/img) | 아바타·소셜 미리보기. [favicons/](https://github.com/arti1117/arti1117.github.io/tree/master/assets/img/favicons)는 실제 아이콘·manifest |
