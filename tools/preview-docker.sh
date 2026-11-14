@@ -4,7 +4,7 @@
 # 형제 private 저장소의 tracked drafts를 읽기 전용으로 마운트해 렌더링한다.
 set -eu
 cd "$(dirname "$0")/.."
-private_drafts_dir="${BLOG_PRIVATE_DRAFTS_DIR:-../arti1117.github.io.private/drafts}"
+private_drafts_dir="${BLOG_PRIVATE_DRAFTS_DIR:-../arti1117.private/blog/drafts}"
 if [ ! -d "$private_drafts_dir" ]; then
   echo "private drafts directory not found: $private_drafts_dir" >&2
   exit 1

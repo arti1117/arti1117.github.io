@@ -34,7 +34,7 @@ Jekyll과 검색엔진이 참조하는 경로는 유지한다. `docs/`와 루트
 
 ## 글 작성과 공개
 
-1. 편집 원본은 형제 비공개 저장소 `../arti1117.github.io.private/drafts/YYYY-MM-DD-slug.md`에 둔다. 앞머리 형식과 내용 기준은 작성 가이드를 따른다.
+1. 편집 원본은 형제 비공개 저장소 `../arti1117.private/blog/drafts/YYYY-MM-DD-slug.md`에 둔다. 앞머리 형식과 내용 기준은 작성 가이드를 따른다.
 2. [preview-docker.sh](https://github.com/arti1117/arti1117.github.io/blob/master/tools/preview-docker.sh)로 비공개 원고를 읽기 전용 마운트해 검토한다. 이 저장소의 `_drafts/`에 편집 사본을 만들지 않는다.
 3. JY가 공개할 문구와 범위를 최종 확인한다. 원고의 미완성·실험·AI 도움 범위를 실제 근거에 맞춰 표시한다.
 4. 승인 시 비공개 원본의 `draft_status`를 `reviewed`로 기록하고 원본을 보존한다. 승인된 스냅샷만 `_posts/`에 복사하며 공개본에서는 내부 상태 필드를 제거한다. 두 저장소를 자동 동기화하지 않는다.

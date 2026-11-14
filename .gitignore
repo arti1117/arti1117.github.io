@@ -8,7 +8,7 @@ vendor
 .jekyll-metadata
 _site
 
-# Defensive barrier only — canonical drafts are tracked in ../arti1117.github.io.private/drafts/
+# Defensive barrier only — canonical drafts are tracked in ../arti1117.private/blog/drafts/
 # Never use this public-repo path as the editable source or publish it by moving files.
 _drafts/
 
